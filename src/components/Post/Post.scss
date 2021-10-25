@@ -1,0 +1,11 @@
+img {
+    width: 200px;
+}
+
+.author:after {
+    content: "-";
+    display: inline;
+    font-size: 3em;
+    color: blue;
+    vertical-align: middle;
+}

@@ -4,7 +4,7 @@ import './headerStyling.scss';
 function index(props) {
     return (
         <header className="header">
-            <div class="logo">
+            <div className="logo">
                 LOGO
             </div>
             {props.children}

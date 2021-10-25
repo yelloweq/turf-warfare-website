@@ -1,17 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './navStyling.scss';
+
 function index() {
     return (
         <nav className="navbar">
   
                 <li>
-                    <a href="/">link1</a>
+                    <Link to="/blog" className="link">Blog</Link>
                 </li>
                 <li>
-                    <a href="/">link2</a>
+                    <Link to="/" className="link">LINK2</Link>
                 </li>
                 <li>
-                    <a href="/">link3</a>
+                    <Link to="/" className="link">link3</Link>
                 </li>
 
         </nav>
