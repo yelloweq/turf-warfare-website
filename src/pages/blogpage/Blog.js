@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import firebase from '../../config/firebase';
+import Post from '../../components/Post/Post'
 
 
 function Blog() {
@@ -8,7 +9,7 @@ function Blog() {
     const [blogposts, setBlogposts] = useState([]);
 
     if (loading && !blogposts.length) {
-        firebase.database().ref("Posts/").orderByChild("CreatedAt").once("value").then(snapshot => {
+        firebase.firestore().collection("Posts").orderByChild("CreatedAt").once("value").then(snapshot => {
             let posts = [];
             const snapshotValue = snapshot.val();
             for (let slug in snapshotValue) {
@@ -28,10 +29,22 @@ function Blog() {
     return (
         <>
             <h1>blog posts</h1>
-
-            {/* {blogposts.map(blogpost => (
-                //post component with mapped props
-            ))} */}
+            <div class="container">
+                <div class="wrapper">
+                    <div class="grid">
+                        {blogposts.map(blogpost => (
+                            <Post
+                                title={blogpost.title}
+                                image={blogpost.coverImage}
+                                imageAlt={blogpost.coverImageAlt}
+                                category={blogpost.category}
+                                author="admin"
+                                time={blogpost.createdAt}
+                            />
+            ))}
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
