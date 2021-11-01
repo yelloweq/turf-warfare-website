@@ -42,10 +42,10 @@ function Login() {
                         <button type="submit" className><FaArrowRight size={30} /></button>
                     </div>
                     
-
+                    {/* add link to register page and email verification */}
                     <div className="bottom-links">
-                        <p><a href="#">Can't sign in?</a></p>
-                        <p><a href="#">Create an account</a></p>
+                        <p><a href="/login">Can't sign in?</a></p>
+                        <p><a href="/login">Create an account</a></p>
                     </div>
                 </form>
         </div>
