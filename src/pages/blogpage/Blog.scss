@@ -1,5 +1,30 @@
-.container {
-    display: flex;
-    height: 100%;
+.blog-container {
+    width: 100%;
 
+    .grid {
+        width:100%;
+        display: flex;
+        padding: 0;
+        flex-wrap: wrap;
+
+    }
+
+    .wrapper {
+        padding: 0px 90px;
+        max-width: 1320px;
+        margin: 3% auto 0px;
+        width: 100%;
+        display: block;
+    }
+
+
+    .item {
+        list-style: none;
+        box-sizing: border-box;
+        width: 33.3333%;
+        flex: 0 0 auto;
+        min-width: 0px;
+        display: list-item;
+        padding: 5% 5% 0 0;
+    }
 }

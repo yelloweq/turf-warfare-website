@@ -1,25 +1,26 @@
 import React from 'react';
 import './Post.scss';
+import moment from 'moment';
 
-function Post(props) {
+function Post({index, image, imageAlt, category, title, content, author, createdAt}) {
     return (
-        <article key={props.index} className="card">
+        <article key={index} className="post-container">
             <div className="image">
-                <img src={props.image} alt={props.imageAlt} />
+                <img src={image} alt={imageAlt} />
             </div>
             <div className="info">
                 <div className="category">
-                    {props.category}
+                    {category}
                 </div>
                 <div className="title">
-                    <h2>{props.title}</h2>
+                    <h2>{title}</h2>
                 </div>
                 <div className="content">
-                    {props.content}
+                    {content}
                 </div>
                 <div className="meta">
-                    <span className="author">{props.author}</span>
-                    <span className="time">{new Date(props.createdAt.seconds * 1000).toDateString()}</span>
+                    <span className="post author">{author}</span>
+                    <span className="post time">{moment(new Date(createdAt.seconds *1000), "seconds").fromNow()}</span>
                 </div>
             </div>
         </article>

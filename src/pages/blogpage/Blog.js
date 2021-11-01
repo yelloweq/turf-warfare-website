@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import firebase from '../../config/firebase';
 import Post from '../../components/Post/Post';
 import './Blog.scss';
+import Title from '../../components/title/Title'
 
 function Blog() {
 
@@ -25,14 +26,15 @@ function Blog() {
 
     return (
         <>
-            <h1>blog posts</h1>
-            <div className="container">
+            <Title>Blog Posts</Title>
+            <div className="blog-container">
                 <div className="wrapper">
-                    <ol className="gird">
+                    <ol className="grid">
                         {blogposts ? (
                             blogposts.map((blogpost) => {
                                 //need to fix key console error
-                            return (
+                                return (
+                                <li className="item">
                                 <Post
                                     index={blogpost.id}
                                     title={blogpost.title}
@@ -40,9 +42,10 @@ function Blog() {
                                     imageAlt={blogpost.coverImageAlt}
                                     category={blogpost.category}
                                     createdAt={blogpost.createdAt}
-                                    content={blogpost.content}
+                                    // content={blogpost.content}
                                     author="admin"
                                 />     
+                                </li>
                             )})) : null}
                     </ol>
                 </div>

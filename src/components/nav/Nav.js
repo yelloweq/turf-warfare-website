@@ -1,23 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import './navStyling.scss';
+import './Nav.scss';
 
-function index() {
+function Nav() {
     return (
         <nav className="navbar">
   
                 <li>
-                    <Link to="/blog" className="link">Blog</Link>
+                    <Link to="/blog" className="nav-link">blog</Link>
                 </li>
                 <li>
-                    <Link to="/" className="link">LINK2</Link>
+                    <Link to="/" className="nav-link">patch notes</Link>
                 </li>
                 <li>
-                    <Link to="/" className="link">link3</Link>
+                    <Link to="/" className="nav-link">contact</Link>
                 </li>
 
         </nav>
     )
 }
 
-export default index
+export default Nav

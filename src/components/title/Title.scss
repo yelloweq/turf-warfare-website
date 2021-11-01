@@ -1,0 +1,21 @@
+.title-wrapper {
+    padding: 2% 60px;
+    display: block;
+
+    .content{
+        align-items: center;
+        padding: 30px;
+        max-width: 1200px;
+        margin: 0px auto;
+        background: black;
+
+        .text{
+            display: flex;
+            color: white;
+            font-weight: 800;
+            font-style: italic;
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+    }
+}
