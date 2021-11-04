@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Post.scss';
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 import firebase from '../../config/firebase';
 import moment from 'moment';
 
@@ -15,7 +15,7 @@ function Post({ match }) {
             setLoading(false);
             
         });
-    }, []);
+    }, [match]);
 
 
     if (loading) {

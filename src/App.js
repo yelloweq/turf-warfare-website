@@ -22,8 +22,8 @@ function App() {
         <Route path="/signup" component={Signup} />
       </AuthProvider>
       <Route exact path="/blog" component={Blog} />
-      <Route exact path="/" component={Home} />
       <Route path="/blog/:slug" component={Post} />
+      <Route exact path="/" component={Home} />
 
     </Router>
   );
