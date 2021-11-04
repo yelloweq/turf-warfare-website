@@ -37,6 +37,45 @@
     }
     .header-right {
         display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+
+        div{
+            display: flex;
+            
+
+        }
+
+        .play-button{
+            margin: 15px 20px;
+            text-decoration: none;
+            color: #f9f9f9;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            border-radius: 2px;
+            line-height: 16px;
+            padding: 12px 0;
+            background-color: rgb(64, 189, 249);
+            min-width: 129px;
+            max-width: 220px;
+            font-size: 14px;
+            text-overflow: ellipsis;
+            text-align: center;
+            vertical-align: middle;
+            text-transform: uppercase;
+        }
+
+        .login-button{
+            margin: 0px 20px;
+            text-decoration: none;
+            color: #f9f9f9;
+            font-weight: 800;
+            line-height: 80px;
+            font-size: 14px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
         
     }
 }

@@ -38,7 +38,7 @@ function Login() {
                     
                     </div>
 
-                    <div class="button-container">
+                    <div className="button-container">
                         <button type="submit" className><FaArrowRight size={30} /></button>
                     </div>
                     

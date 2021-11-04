@@ -2,12 +2,20 @@
     padding: 2% 60px;
     display: block;
 
+    .title-container{
+        margin: 0 auto;
+        max-width: 1680px;
+    }
+    .inner-wrapper {
+        background: black;
+    }
+
     .content{
         align-items: center;
         padding: 30px;
         max-width: 1200px;
         margin: 0px auto;
-        background: black;
+        
 
         .text{
             display: flex;

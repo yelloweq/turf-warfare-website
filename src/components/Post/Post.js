@@ -1,29 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Post.scss';
+import { Redirect } from 'react-router-dom';
+import firebase from '../../config/firebase';
 import moment from 'moment';
 
-function Post({index, image, imageAlt, category, title, content, author, createdAt}) {
+
+function Post({ match }) {
+    const [loading, setLoading] = useState(true);
+    const [currentPost, setCurrentPost] = useState();
+
+    useEffect(() => {
+        firebase.firestore().collection("Posts").where("slug", "==", match.params.slug).get().then(snap => {
+            setCurrentPost((snap.docs[0]));
+            setLoading(false);
+            
+        });
+    }, []);
+
+
+    if (loading) {
+        return <h1>Loading...</h1>
+    }
+    
     return (
-        <article key={index} className="post-container">
-            <div className="image">
-                <img src={image} alt={imageAlt} />
-            </div>
-            <div className="info">
-                <div className="category">
-                    {category}
-                </div>
-                <div className="title">
-                    <h2>{title}</h2>
-                </div>
-                <div className="content">
-                    {content}
-                </div>
-                <div className="meta">
-                    <span className="post author">{author}</span>
-                    <span className="post time">{moment(new Date(createdAt.seconds *1000), "seconds").fromNow()}</span>
-                </div>
-            </div>
-        </article>
+        <>
+            <img src={currentPost.data().coverImage} alt={currentPost.data().coverImageAlt} />
+            <h1>{currentPost.data().title}</h1>
+            <p>{currentPost.data().category}</p>
+            <p>{currentPost.data().content}</p>
+            <p>{moment(new Date(currentPost.data().createdAt.seconds *1000), "seconds").fromNow()}</p>
+            
+        </>
     )
 }
 
