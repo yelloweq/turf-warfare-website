@@ -1,0 +1,132 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Trench Warfare</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/* This is set so the automatic background aligns with the sceen size.*/
+body, html{
+	height: 100%; 
+	margin: 0;
+
+}
+
+
+.footer {
+  position: absolute; 
+  left: 25%; 
+  bottom: 0;
+  width: 50%; /* Chose this so it can adjust as the screen is resized.*/
+  background-color: rgb(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 10px;
+
+  
+}
+
+.footer p{
+opacity: 1;
+
+}
+
+
+
+
+.nav{
+    list-style:none;
+    margin:0; /* This ensures no gaps.*/
+    padding:0; /* Ensures no space.*/
+    text-align:center;
+font-family: 'Alfa Slab One', cursive;
+ overflow: hidden;
+ font-size: 17px;
+
+
+  background: rgba(0, 0, 0, 0.5); 
+
+
+}
+
+.nav a:hover {
+ 
+  color: white;
+
+}
+
+.nav li{
+    display:inline;
+	
+}
+
+.nav a{
+    display:inline-block;
+    padding:10px;
+	 color: gold;
+	 text-decoration: none;	
+}
+
+.logo{
+	 
+position:relative;
+  background-size: cover; 
+height: auto;
+
+   
+  
+
+}
+
+.home{
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("home.jpg"); 
+}
+
+span{
+
+color: gold;
+font-size: 15px;
+font-weight: bold;
+
+}
+
+
+</style>
+</head>
+
+
+<body>
+<!--The home class where most the data is contained in.-->
+<div class="home">
+<!--The nav class where the nav bar is created as a list.-->
+<ul class="nav">
+  <li><a href="home.html">Home</a></li>
+  <li><a href="blog.html">Blog</a></li>
+  <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+
+  </ul>
+<!--The logo class where the logo is added. Source:www.aston.ac.uk-->
+<div class="logo"><img src="logo.png" width="50%" height="auto" alt="logo">
+</div>
+</div>
+
+
+ <!--The footer class where the footer is created.-->
+  <div class="footer">
+  <p><span>Turn Based Trench Combat</span><br>
+  Catchy line or slogan <br>
+  Email: Trench@aston.ac.uk<br>
+  Copyright © 2021 Trench Warfare. All rights reserved.</p>
+</div>
+
+
+
+</body>
+</html>
