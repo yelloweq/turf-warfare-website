@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import firebase from '../../config/firebase';
-import Post from '../../components/Post/Post';
 import './Blog.scss';
+import Title from '../../components/title/Title'
+import moment from 'moment';
+import { Link } from 'react-router-dom';
 
 function Blog() {
 
@@ -14,7 +16,7 @@ function Blog() {
             snap.docs.forEach(doc => {
                 posts.push({ ...doc.data(), id: doc.id })
             })
-            setBlogposts(posts);
+            setBlogposts(posts.reverse());
             setLoading(false);
         });
     }, []);
@@ -25,25 +27,36 @@ function Blog() {
 
     return (
         <>
-            <h1>blog posts</h1>
-            <div className="container">
+            <Title>Blog Posts</Title>
+            <div className="blog-container">
                 <div className="wrapper">
-                    <ol className="gird">
+                    <ol className="grid">
                         {blogposts ? (
                             blogposts.map((blogpost) => {
-                                //need to fix key console error
-                            return (
-                                <Post
-                                    index={blogpost.id}
-                                    title={blogpost.title}
-                                    image={blogpost.coverImage}
-                                    imageAlt={blogpost.coverImageAlt}
-                                    category={blogpost.category}
-                                    createdAt={blogpost.createdAt}
-                                    content={blogpost.content}
-                                    author="admin"
-                                />     
-                            )})) : null}
+                                return (
+                                    <li className="item">
+                                        <article key={blogpost.id} className="post-container">
+                                            <Link to={`/blog/${blogpost.slug}`}>
+                                                <div className="image">
+                                                    <img src={blogpost.coverImage} alt={blogpost.coverImageAl} />
+                                                </div>
+                                                <div className="info">
+                                                    <div className="category">
+                                                        {blogpost.category}
+                                                    </div>
+                                                    <div className="title">
+                                                        <h2>{blogpost.title}</h2>
+                                                    </div>
+                                                    <div className="meta">
+                                                        <span className="post author">admin</span>
+                                                        <span className="post time">{moment(new Date(blogpost.createdAt.seconds *1000), "seconds").fromNow()}</span>
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        </article> 
+                                    </li>
+                                )
+                            })) : null}
                     </ol>
                 </div>
             </div>
