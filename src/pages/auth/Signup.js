@@ -2,14 +2,16 @@ import React, { useRef, useState } from 'react'
 import { FaFacebook, FaGoogle, FaApple, FaArrowRight } from 'react-icons/fa'
 import './auth.scss'
 import { useAuth } from '../../contexts/AuthContext'
+import { Link, useHistory } from 'react-router-dom'
 
 function Signup() {
     const emailRef = useRef()
     const passwordRef = useRef()
     const confirmPasswordRef = useRef()
-    const { signup, currentUser } = useAuth()
+    const { signup } = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
+    const history = useHistory()
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -22,8 +24,8 @@ function Signup() {
             setError('')
             setLoading(true)
             await signup(emailRef.current.value, passwordRef.current.value)
-            
-        } catch {
+            history.push("/")
+        } catch  {
             setError("Failed to create an account")
         }
         setLoading(false)
@@ -31,21 +33,21 @@ function Signup() {
     return (
         <div className="signup-container">
             <h1>Sign up</h1>
-            {JSON.stringify(currentUser)}
+           
             {error && <h2>{error}</h2>}
             <form className="form" id="register_form" onSubmit={handleSubmit}>
                 <div className="input-container">
                     <input type="text" name="email" ref={ emailRef } required />
-                    <label for="email">Email</label>
+                    <label htmlFor="email">Email</label>
                 </div>
                 <div className="input-container input-value">
                     <input type="password" name="password" ref={ passwordRef } required />
-                    <label for="password">Password</label>
+                    <label htmlFor="password">Password</label>
                 </div>
                 
                 <div className="input-container input-value">
                     <input type="password" name="confirmPassword" ref={ confirmPasswordRef }required />
-                    <label for="confirmPassword">Confirm Password</label>
+                    <label htmlFor="confirmPassword">Confirm Password</label>
                 </div>
 
                 <div className="social">
@@ -62,7 +64,7 @@ function Signup() {
 
                 <div className="checkbox-container">
                     <input type="checkbox" className="checkbox" id="check" value="stay" />
-                    <label for="check">Stay signed in </label>
+                    <label htmlFor="check">Stay signed in </label>
                     
                 </div>
 
@@ -72,8 +74,8 @@ function Signup() {
                     
                     {/* add link to register page and email verification */}
                 <div className="bottom-links">
-                    <p><a href="/login">Can't sign in?</a></p>
-                    <p><a href="/login">Already have an account?</a></p>
+                    <p><Link to="/Login">Can't sign in?</Link></p>
+                    <p><Link to="/Login">Already have an account?</Link></p>
                 </div>
             </form>
         </div>
