@@ -1,5 +1,4 @@
 import React from 'react'
-import background from '../../resources/img/home.jpg'
 import { useAuth } from '../../contexts/AuthContext'
 import { Link } from 'react-router-dom'
 import './Home.scss'
