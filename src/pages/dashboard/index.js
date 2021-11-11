@@ -3,7 +3,7 @@ import { useAuth } from '../../contexts/AuthContext'
 import { useHistory } from 'react-router-dom'
 
 
-function Home() {
+function Dashboard() {
     const { currentUser, logout } = useAuth()
     const [error, setError] = useState('')
     const history = useHistory()
@@ -29,4 +29,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Dashboard

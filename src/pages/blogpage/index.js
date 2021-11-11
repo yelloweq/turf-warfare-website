@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import firebase from '../../config/firebase';
 import './Blog.scss';
-import Title from '../../components/title/Title'
+import Title from '../../components/title'
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 
