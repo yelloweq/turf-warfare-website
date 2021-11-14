@@ -24,7 +24,7 @@ export default function Home() {
                 </p>
                 <div className="play-wrapper">
                 {currentUser ? 
-                <Link className="play-button" to="/play-now">Play for free</Link> : <Link className="play" to="/register">Play Now</Link> }
+                <Link className="play-button" to="/play-now">Play for free</Link> : <Link className="play-button" to="/register">Play Now</Link> }
                 </div>
             </div>
             </section>
