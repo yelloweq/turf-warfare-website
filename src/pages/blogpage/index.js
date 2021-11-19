@@ -28,6 +28,7 @@ function Blog() {
     return (
         <>
             <Title>Blog Posts</Title>
+            <section>
             <div className="blog-container">
                 <div className="wrapper">
                     <ol className="grid">
@@ -59,7 +60,8 @@ function Blog() {
                             })) : null}
                     </ol>
                 </div>
-            </div>
+                </div>
+            </section>
         </>
     )
 }

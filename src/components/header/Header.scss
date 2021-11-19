@@ -1,5 +1,5 @@
 .header-container {
-    background: #111;
+    background: rgb(20, 20, 20);
     display: flex;
     align-items: center;
 
@@ -24,6 +24,7 @@
         vertical-align: middle;
         text-decoration: none;
         color: red;
+        font-size: 18px;
     }
 
     .divider {
@@ -51,7 +52,7 @@
             margin: 15px 20px;
             text-decoration: none;
             color: #f9f9f9;
-            font-weight: 800;
+            font-weight: 400;
             letter-spacing: 0.1em;
             border-radius: 2px;
             line-height: 16px;
@@ -59,7 +60,7 @@
             background-color: rgb(64, 189, 249);
             min-width: 129px;
             max-width: 220px;
-            font-size: 14px;
+            font-size: 18px;
             text-overflow: ellipsis;
             text-align: center;
             vertical-align: middle;
@@ -72,7 +73,7 @@
             color: #f9f9f9;
             font-weight: 800;
             line-height: 80px;
-            font-size: 14px;
+            font-size: 18px;
             letter-spacing: 0.1em;
             text-transform: uppercase;
         }

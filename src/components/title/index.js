@@ -5,10 +5,8 @@ function Title({children}) {
     return (
         <div className="title-wrapper">
             <div className="title-container">
-                <div className="inner-wrapper">
-                    <div className="content">
-                        <div className="text">{children}</div>
-                    </div>
+                <div className="content">
+                    <div className="text">{children}</div>
                 </div>
             </div>
         </div>

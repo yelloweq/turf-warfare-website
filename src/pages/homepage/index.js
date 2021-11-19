@@ -9,8 +9,8 @@ export default function Home() {
     return (
         <div className="home">
             <section className='landing'>
-            <div class="right">
-                Trench Based Warfare
+            <div className="container">
+                <div className="title">Trench Warfare</div>    
                 <p>
                 Trench Warfare is an award winning turn based strategy game about building a base and going into combat.
                 With thousands of players, it is one of <strong> the most thrilling strategy game </strong>.
