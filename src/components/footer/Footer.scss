@@ -1,0 +1,43 @@
+.footer-container{
+    background-color: #252525;
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    .wrapper {
+        width: 50%;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        .left{
+            display: block;
+            max-width: fit-content;
+       
+            .title{
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 1rem;
+                max-width: max-content;
+            }
+            .links{
+                display: flex;
+                flex-direction: row;
+
+                a{
+                    display: block;
+                    text-decoration: none;
+                    color: #A3A3A3;
+                    margin: 6px 48px 5px 0px;
+
+                }
+
+            }
+        }
+
+        .right{
+            display: block;
+        }
+        
+    }
+
+}
