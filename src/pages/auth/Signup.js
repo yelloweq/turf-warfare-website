@@ -31,6 +31,7 @@ function Signup() {
         setLoading(false)
     }
     return (
+        <div className="signup-outer-wrapper">
         <div className="signup-container">
             <h1>Sign up</h1>
            
@@ -79,7 +80,7 @@ function Signup() {
                 </div>
             </form>
         </div>
-
+        </div>
     )
 }
 

@@ -1,256 +1,250 @@
+.signup-outer-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-    .signup-container {
-        position: absolute;
-        display: flex;
-        left: 25%;
-        top: 80px;
-        width: 35rem;
-        height: 45rem;
-        text-align: center;
-        flex-direction: column;
+	.signup-container {
+		width: 35rem;
+		height: 45rem;
+		text-align: center;
 
-        h1 {
-            margin-top: 6rem;
-            font-size: 2rem;
-            font-family: 'Maven Pro', sans-serif;
-        }
-    
-    
+		h1 {
+			margin-top: 6rem;
+			font-size: 2rem;
+			font-family: "Maven Pro", sans-serif;
+		}
 
-        .form {
-            height:100%;
-            opacity: 0;
-            padding-top: 4rem;
-            width: 80%;
-            margin: auto;
-            animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0.175s 1 normal forwards;
+		.form {
+			height: 100%;
+			opacity: 0;
+			padding-top: 4rem;
+			width: 80%;
+			margin: auto;
+			animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0.175s 1
+				normal forwards;
 
-            .input-container {
-                position: relative;
-                height: 4rem;
-                background: rgba(126,126,126, 0.1);
-                border: 2px solid rgba(126,126,126, 0.1);
-                margin-bottom: 16px;
-                border-bottom-width: 1px;
+			.input-container {
+				position: relative;
+				height: 4rem;
+				background: rgba(126, 126, 126, 0.1);
+				border: 2px solid rgba(126, 126, 126, 0.1);
+				margin-bottom: 16px;
+				border-bottom-width: 1px;
 
-                input {
-                    display:block;
-                    position: absolute;
-                    height: 2.4rem;
-                    border: 0;
-                    background: none;
-                    z-index: 1;
-                    font-size: 1.6rem;
-                    font-weight: bold;
-                    font-family: 'Maven', sans-serif;
-                    letter-spacing: 0.012em;
-                    color: #333;
-                }
+				input {
+					display: block;
+					position: absolute;
+					height: 2.4rem;
+					border: 0;
+					background: none;
+					z-index: 1;
+					font-size: 1.6rem;
+					font-weight: bold;
+					font-family: "Maven", sans-serif;
+					letter-spacing: 0.012em;
+					color: #333;
+				}
 
-                input[type=text], input[type=password] {
-                    width:100%;
-                    padding-top: 1em;
-                }
+				input[type="text"],
+				input[type="password"] {
+					width: 100%;
+					padding-top: 1em;
+				}
 
-                label {
-                    font-family: 'Maven Pro', sans-serif;
-                    font-weight: bold;
-                    position: absolute;
-                    display: block;
-                    margin-top: 2px;
-                    padding: 1px;
-                    color: #525252;
-                    letter-spacing: 0.08em;
-                    text-transform: uppercase;
-                    font-size: 1.2em;
-                    animation-name: labelIn;
-                    animation-duration: 1.2s;
-                    animation-direction: reverse;
-                    animation-fill-mode: forwards;
-                    animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
-                }
+				label {
+					font-family: "Maven Pro", sans-serif;
+					font-weight: bold;
+					position: absolute;
+					display: block;
+					margin-top: 2px;
+					padding: 1px;
+					color: #525252;
+					letter-spacing: 0.08em;
+					text-transform: uppercase;
+					font-size: 1.2em;
+					animation-name: labelIn;
+					animation-duration: 1.2s;
+					animation-direction: reverse;
+					animation-fill-mode: forwards;
+					animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+				}
 
-                input:focus + label, input:valid + label {
-                    font-weight: bold;
-                    animation-name: labelOut;
-                    animation-duration: 0.2s;
-                    animation-direction: normal;
-                    animation-fill-mode: forwards;
-                    animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
-                }
-            }
+				input:focus + label,
+				input:valid + label {
+					font-weight: bold;
+					animation-name: labelOut;
+					animation-duration: 0.2s;
+					animation-direction: normal;
+					animation-fill-mode: forwards;
+					animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+				}
+			}
 
-            .input-value {
-                box-sizing: border-box;
-                display: inline-block;
-                width: 100%;
+			.input-value {
+				box-sizing: border-box;
+				display: inline-block;
+				width: 100%;
+			}
+		}
 
-            }
+		.social {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
-            
+			:first-child {
+				margin-left: 0;
+			}
+			:last-child {
+				margin-right: 0;
+			}
 
-        }
+			div {
+				width: 100%;
+				height: 3em;
+				border: 2px solid rgba(0, 0, 0, 0.5);
+				border-radius: 4px;
+				margin: 10px;
+				line-height: 3em;
+				cursor: pointer;
+			}
 
+			.facebook {
+				color: #fff;
+				background-color: #1876f2;
+			}
 
-        .social {
-            display: flex;
+			.facebook:hover {
+				background-color: #0066eb;
+			}
 
-            :first-child {
-                margin-left: 0;
-            }
-            :last-child {
-                margin-right: 0;
-            }
+			.google {
+				color: #0966de;
+				background-color: #fff;
+			}
 
-            div {
-                width: 100%;
-                height: 3em;
-                border: 2px solid rgba(0,0,0,0.5);
-                border-radius: 4px;
-                margin: 10px;
-                line-height: 3em;
-                cursor: pointer;
-            }
+			.apple {
+				color: #fff;
+				border-color: rgba(211, 211, 211, 0.966);
+			}
+		}
 
-            .facebook {
-                color: #fff;
-                background-color: #1876f2;
-            }
+		.checkbox-container {
+			display: flex;
+			width: 100%;
+			margin: 1rem 0;
+			cursor: pointer;
+			align-items: center;
 
-            .facebook:hover {
-                background-color: #0066eb;
-            }
+			:hover {
+				.checkbox {
+					filter: brightness(0.8);
+				}
+			}
 
-            .google{
-                color: #0966DE;
-                
-            }
+			label {
+				font-family: "Maven Pro", sans-serif;
+				font-weight: bold;
+				margin: 0.5rem 0 0.5rem 0.5rem;
+				padding: 1px;
+				color: #525252;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				font-size: 1.2em;
+				cursor: pointer;
+				width: 100%;
+				text-align: left;
+			}
+		}
 
-        }
+		.button-container {
+			display: flex;
+			width: 100%;
+			justify-content: center;
+			cursor: pointer;
 
-        .checkbox-container {
-            display: flex;
-            width: 100%;
-            margin: 1rem 0;
-            cursor: pointer;
-            align-items: center;
-
-            :hover {
-                .checkbox {
-                    filter: brightness(0.8);
-                }
-            }
-            
-
-                label{
-                    font-family: 'Maven Pro', sans-serif;
-                    font-weight: bold;
-                    margin: 0.5rem 0 0.5rem 0.5rem;
-                    padding: 1px;
-                    color: #525252;
-                    letter-spacing: 0.08em;
-                    text-transform: uppercase;
-                    font-size: 1.2em;
-                    cursor: pointer;
-                    width: 100%;
-                    text-align: left;
-                }
-                
-            
-            
-        }
-
-
-        .button-container{
-            display:flex;
-            width:100%;
-            justify-content: center;
-            cursor: pointer;
-
-            :hover{
-                filter: brightness(0.8);
-            }
-            button{
-            background-color: lightblue;
-            border-radius: 1.5rem;
-            min-width: fit-content;
-            width: 4.5rem;
-            height: 5rem;
-            display: block;
-            justify-content: center;
-            align-items: center;
-            border: none;
-        }
-        }
-  
-    }
-    
+			:hover {
+				filter: brightness(0.8);
+			}
+			button {
+				background-color: lightblue;
+				border-radius: 1.5rem;
+				min-width: fit-content;
+				width: 4.5rem;
+				height: 5rem;
+				display: block;
+				justify-content: center;
+				align-items: center;
+				border: none;
+			}
+		}
+	}
+}
 @keyframes labelOut {
-    0%{
-        font-size: 1em;
-        top: 1.2em;
-        left: 1px;
-        opacity: 1;
-        padding-left: 1em;
-    }
-    50% {
-        font-size: 1em;
-        top: 1.2em;
-        left: 1em;
-        opacity: 0;
-        padding-left: 1em;
-    }
-    50.01% {
-        font-size: 0.85em;
-        top: 0.2em;
-        left: 1em;
-        opacity: 0;
-        padding-left: 1em;
-    }
-    100% {
-        font-size: 0.85em;
-        top: 0.2em;
-        left: 1px;
-        opacity: 1;
-        padding-left: 1em;
-    }
+	0% {
+		font-size: 1em;
+		top: 1.2em;
+		left: 1px;
+		opacity: 1;
+		padding-left: 1em;
+	}
+	50% {
+		font-size: 1em;
+		top: 1.2em;
+		left: 1em;
+		opacity: 0;
+		padding-left: 1em;
+	}
+	50.01% {
+		font-size: 0.85em;
+		top: 0.2em;
+		left: 1em;
+		opacity: 0;
+		padding-left: 1em;
+	}
+	100% {
+		font-size: 0.85em;
+		top: 0.2em;
+		left: 1px;
+		opacity: 1;
+		padding-left: 1em;
+	}
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes labelIn {
-    0% {
-        left: 1px;
-        opacity: 1;
-        top: 1.2em;
-        font-size: 1em;
-        padding-left: 1em;
-    }
-    50% {
-        font-size: 1em;
-        left: 1em;
-        opacity: 0;
-        top: 1.2em;
-        padding-left: 1em;
-    }
-    50.01% {
-        font-size: 0.85em;
-        left: 1em;
-        opacity: 0;
-        top: 0.2em;
-    }
-    100% {
-        font-size: 0.85em;
-        left: 1px;
-        opacity: 1;
-        top: 0.2em;
-    }
+	0% {
+		left: 1px;
+		opacity: 1;
+		top: 1.2em;
+		font-size: 1em;
+		padding-left: 1em;
+	}
+	50% {
+		font-size: 1em;
+		left: 1em;
+		opacity: 0;
+		top: 1.2em;
+		padding-left: 1em;
+	}
+	50.01% {
+		font-size: 0.85em;
+		left: 1em;
+		opacity: 0;
+		top: 0.2em;
+	}
+	100% {
+		font-size: 0.85em;
+		left: 1px;
+		opacity: 1;
+		top: 0.2em;
+	}
 }
-    
