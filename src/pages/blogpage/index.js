@@ -4,7 +4,7 @@ import './Blog.scss';
 import Title from '../../components/title'
 import moment from 'moment';
 import { Link } from 'react-router-dom';
-
+import img from '../../resources/img/announcement1.png'
 function Blog() {
 
     const [loading, setLoading] = useState(true);
@@ -39,7 +39,8 @@ function Blog() {
                                         <article key={blogpost.id} className="post-container">
                                             <Link to={`/blog/${blogpost.slug}`}>
                                                 <div className="image">
-                                                    <img src={blogpost.coverImage} alt={blogpost.coverImageAl} />
+                                                    {/* <img src={blogpost.coverImage} alt={blogpost.coverImageAl} /> */}
+                                                    <img src={img} alt={blogpost.coverImageAl} />
                                                 </div>
                                                 <div className="info">
                                                     <div className="category">
@@ -49,7 +50,7 @@ function Blog() {
                                                         <h2>{blogpost.title}</h2>
                                                     </div>
                                                     <div className="meta">
-                                                        <span className="post author">admin</span>
+                                                        <span className="post author">Team 4</span>
                                                         <span className="post time">{moment(new Date(blogpost.createdAt.seconds *1000), "seconds").fromNow()}</span>
                                                     </div>
                                                 </div>

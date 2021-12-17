@@ -3,8 +3,10 @@ import { useAuth } from '../../contexts/AuthContext'
 import { Link } from 'react-router-dom'
 import './Home.scss'
 
+
 export default function Home() {
     const { currentUser } = useAuth()
+
 
     return (
         <div className="home">
@@ -28,6 +30,14 @@ export default function Home() {
                 </div>
             </div>
             </section>
+            
+            {/* <section className="reviews">
+                <div className="reviews-container">
+                    <div className="review"></div>
+                    <div className="review"></div>
+                    <div className="review"></div>
+                </div>
+            </section> */}
         </div>
     )
 }
