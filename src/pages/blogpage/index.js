@@ -22,7 +22,7 @@ function Blog() {
     }, []);
     
     if (loading) {
-        return <h1> Loading...</h1>
+        return <h1>You need to be signed in to view this content.</h1>
     }
 
     return (
