@@ -5,10 +5,10 @@ import './Footer.scss'
 function Footer() {
     return (
         <footer>
-            <div class="footer-container">
+            <div class="container-fluid d-flex footer-container justify-content-center align-items-center">
                 <div class="wrapper">
                     <div class="left">
-                        <div class="title">Turf Warfare</div>
+                        <div class="title">Trench Warfare</div>
                         <div class="links">
                             <a href='/'>link</a>
                             <a href='/'>link</a>
