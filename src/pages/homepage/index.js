@@ -9,21 +9,21 @@ export default function Home() {
 
 
     return (
-        <div className="home">
+       
             <section className='landing'>
-            <div className="container">
-                <div className="title">Trench Warfare</div>    
-                <p>
-                Trench Warfare is an award winning turn based strategy game about building a base and going into combat.
-                With thousands of players, it is one of <strong> the most thrilling strategy game </strong>.
+            <div className="container text-white col-xxl-8 px-4 py-5 ms-0">
+                <h1 className='display-4 fw-bold 1h-1 mb-3'>Trench Warfare</h1>    
+                <h2>
+                Experience a unique battle against formidable opponents and start your journey to becoming the king of the bloody hills by using everything to your adavntage!
                 <br />
                 <br />
-                You play as one of 2 soldiers initially armed with your base and only a cannon, you'll need to focus on your aim and power in order
-                to defeat your enemy! Hit your opponent to knock them off their base or wear down their health until they fall! Earn points by making tactical shots in order to <strong> unlock new weapons and upgrade your base!</strong>
-                <br />
+                Build out your base and weapons by earning resources during the fight to dominate the battle field.
                 <br />
                 Cannons, Guns, Grenades. Trench Warfare has it all!
-                </p>
+                <br />
+                <br />
+                Get out there and show yourself on the leaderboards today!
+                </h2>
                 <div className="play-wrapper">
                 {currentUser ? 
                 <Link className="play-button" to="/play-now">Play for free</Link> : <Link className="play-button" to="/signup">Play Now</Link> }
@@ -31,13 +31,7 @@ export default function Home() {
             </div>
             </section>
             
-            {/* <section className="reviews">
-                <div className="reviews-container">
-                    <div className="review"></div>
-                    <div className="review"></div>
-                    <div className="review"></div>
-                </div>
-            </section> */}
-        </div>
+       
+       
     )
 }

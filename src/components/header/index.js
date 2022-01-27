@@ -2,26 +2,26 @@ import React from 'react'
 import './Header.scss';
 import { Link } from 'react-router-dom';
 
+
 function Header(props) {
     return (
-        <header className="header-container">
-            <div className="header-left">
-                <a href="/" className="logo">
-                    LOGO
-                </a>
+        <header className="d-flex  align-items-center justify-content-center justify-content-md-between py-3 text-white">
+            <div className='d-flex col-md-3 justify-content-center'>
+                <a href="/" className="logo">Logo</a>
             </div>
-            <div className="divider"></div>
+            
+
             {props.children}
-            <div className="header-right">
-                <div className="login-container">
-                    <Link to="/login" className="login-button">sign in</Link>
-                </div>
-                
-                <div className="play-container">
-                    <Link to="/login" className="play-button">Play Now</Link>
-                </div>
-                
+
+            <div className='d-flex col-md-3 justify-content-center'>
+                <Link to="/login" className="btn btn-outline-primary me-5">sign in</Link>
+
+                <Link to="/login" className="btn btn-primary">Play Now</Link>
             </div>
+            
+                
+                
+           
         </header>
     )
 }

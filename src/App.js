@@ -10,6 +10,9 @@ import Login from './pages/auth/Login';
 import Signup from './pages/auth/Signup';
 import { AuthProvider } from './contexts/AuthContext';
 import Dashboard from './pages/dashboard';
+import About from './pages/about'
+import Leaderboard from './pages/leaderboard'
+import Contact from './pages/contact';
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
        
         <Route exact path="/blog" component={Blog} />
         <Route path="/blog/:slug" component={Post} />
+        <Route path="/leaderboard" component={Leaderboard} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
         <Route path="/dashboard" component={Dashboard} />
         <Route exact path="/" component={Home} />
         </AuthProvider>

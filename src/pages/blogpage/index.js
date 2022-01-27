@@ -29,7 +29,7 @@ function Blog() {
         <>
             <Title>Blog Posts</Title>
             <section>
-            <div className="blog-container">
+            <div className="container">
                 <div className="wrapper">
                     <ol className="grid">
                         {blogposts ? (
@@ -43,16 +43,19 @@ function Blog() {
                                                     <img src={img} alt={blogpost.coverImageAl} />
                                                 </div>
                                                 <div className="info">
+                                                    <div className='d-flex justify-content-between'>
                                                     <div className="category">
                                                         {blogpost.category}
                                                     </div>
-                                                    <div className="title">
-                                                        <h2>{blogpost.title}</h2>
+                                                    <div className="time category">{moment(new Date(blogpost.createdAt.seconds *1000), "seconds").fromNow()}</div>
                                                     </div>
-                                                    <div className="meta">
-                                                        <span className="post author">Team 4</span>
-                                                        <span className="post time">{moment(new Date(blogpost.createdAt.seconds *1000), "seconds").fromNow()}</span>
+                                                   
+                                                    <div className="title text-white">
+                                                        <h2 className='blog-title'>{blogpost.title}</h2>
                                                     </div>
+                                                
+                                               
+                                                    
                                                 </div>
                                             </Link>
                                         </article> 

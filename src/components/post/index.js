@@ -24,14 +24,14 @@ function Post({ match }) {
     
     return (
         <>
-        <section className="post">
-        <div className="post-container">
+        <section className="post text-white">
+        <div className="container d-flex flex-column items-align-center justify-content-center">
         <img src={img} alt={currentPost.data().coverImageAlt} />
-            <div className="post-wrapper">
-            <h1>{currentPost.data().title}</h1>
+            <div className="d-flex flex-column">
+            <h1 className='post-title'>{currentPost.data().title}</h1>
             <p className="cat">{currentPost.data().category}</p>
             <p>{currentPost.data().content}</p>
-            <p>{moment(new Date(currentPost.data().createdAt.seconds *1000), "seconds").fromNow()}</p>
+            <p className='text-end'>{moment(new Date(currentPost.data().createdAt.seconds *1000), "seconds").fromNow()}</p>
         </div>
         </div>
         </section>

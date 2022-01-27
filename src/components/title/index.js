@@ -3,12 +3,10 @@ import './Title.scss';
 
 function Title({children}) {
     return (
-        <div className="title-wrapper">
-            <div className="title-container">
+        <div className="container">
                 <div className="content">
-                    <div className="text">{children}</div>
+                    <h1 className="display-4 text-white">{children}</h1>
                 </div>
-            </div>
         </div>
     )
 }

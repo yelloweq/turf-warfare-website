@@ -4,7 +4,7 @@ import './Nav.scss';
 
 function Nav() {
     return (
-        <nav className="navbar">
+        <ul className="nav col-6 col-md-auto justify-content-center mb-md-0">
   
                 <li>
                     <Link to="/blog" className="nav-link">blog</Link>
@@ -13,10 +13,16 @@ function Nav() {
                     <Link to="/" className="nav-link">patch notes</Link>
                 </li>
                 <li>
-                    <Link to="/" className="nav-link">contact</Link>
+                    <Link to="/leaderboard" className="nav-link">leaderboard</Link>
+                </li>
+                <li>
+                    <Link to="/about" className="nav-link">about us</Link>
+                </li>
+                <li>
+                    <Link to="/contact" className="nav-link">contact</Link>
                 </li>
 
-        </nav>
+        </ul>
     )
 }
 
