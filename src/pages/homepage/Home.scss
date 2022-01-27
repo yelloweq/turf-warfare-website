@@ -1,14 +1,12 @@
 
 	.landing {
-		display: flex;
-		justify-content: left;
+		display: block;
 		background-image: url("../../resources/img/home.png");
 		background-position: center;
 		background-repeat: no-repeat;
-		height: 80vh;
-		max-height: 80vh;
-		width: 100vw;
-		overflow: hidden;
+		height: 100%;
+		width: 100%;
+		
 
 		.play-wrapper {
 			text-shadow: none;
