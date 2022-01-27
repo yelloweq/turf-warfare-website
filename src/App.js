@@ -13,6 +13,7 @@ import Dashboard from './pages/dashboard';
 import About from './pages/about'
 import Leaderboard from './pages/leaderboard'
 import Contact from './pages/contact';
+import Footer from './components/footer'
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         </AuthProvider>
       </Switch>
     </Router>
+    <Footer></Footer>
     </>
   );
 }
