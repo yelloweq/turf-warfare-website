@@ -6,7 +6,7 @@ function About() {
       <>
       <section className='hero'>
             <h2>
-                Testing 123456 it works
+                Testing 123
             </h2>
       </section>
       </>
