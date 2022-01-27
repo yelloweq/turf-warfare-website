@@ -1,29 +1,12 @@
-.title-wrapper {
-    padding: 2% 60px;
-    display: block;
 
-    .title-container{
-        margin: 0 auto;
-        max-width: 1680px;
-    }
-    .inner-wrapper {
-        background: black;
-    }
+
 
     .content{
         align-items: center;
-        padding: 30px;
+        padding: 20px;
         max-width: 1200px;
         margin: 0px auto;
-        
+        border-bottom: 1px white solid;
 
-        .text{
-            display: flex;
-            color: white;
-            font-weight: 800;
-            font-style: italic;
-            font-size: 30px;
-            text-transform: uppercase;
-        }
+       
     }
-}

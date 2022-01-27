@@ -1,38 +1,21 @@
-
-   .navbar {
-      display: flex;
-      justify-content: left;
-      align-items: center;
-      height: 80px;
-      box-sizing: border-box;
-      flex: 1;
-
-   li {
-      display: inline;
-      height: 100%;
-      }
-
-   .nav-link {
+.nav-link {
       text-decoration: none;
       color: #f9f9f9;
       padding-top: 2px;
-      padding-left: 12px;
-      padding-right: 12px;
       margin: 0 0.85em;
       overflow: hidden;
-      letter-spacing: .1em;
       display: inline-block;
       height: 100%;
       text-transform: uppercase;
       vertical-align: middle;
       line-height: 80px;
       font-weight: 800;
-      font-size: 14px;
+      font-size: 18px;
+       }
+
+.nav-link:hover {
+   box-shadow: rgb(64, 189, 249) 0px -4px 0px inset;
       }
 
-      a:hover {
-         box-shadow: rgb(64, 189, 249) 0px -4px 0px inset;
-      }
 
-   }
 

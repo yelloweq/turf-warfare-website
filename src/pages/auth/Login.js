@@ -27,6 +27,7 @@ function Login() {
         setLoading(false)
     }
     return (
+        <div className="signup-outer-wrapper">
         <div className="signup-container">
             <h1>Sign in</h1>
            
@@ -42,13 +43,13 @@ function Login() {
                 </div>
 
                 <div className="social">
-                    <div className="facebook">
+                    <div className="social facebook">
                         <FaFacebook size={26} color="#fff"/>
                     </div>
-                    <div className="google">
+                    <div className="social google">
                         <FaGoogle size={26}/>
                     </div>
-                    <div className="apple">
+                    <div className="social apple">
                         <FaApple size={26}/>
                     </div>
                 </div>
@@ -69,6 +70,7 @@ function Login() {
                     <p><Link to="/signup">Register an account</Link></p>
                 </div>
             </form>
+        </div>
         </div>
 
     )
