@@ -1,17 +1,17 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import './Leaderboard.scss';
 
 function Leaderboard() {
 
-    const [loading, setLoading] = useState(true);
-    const [leaderboard, setLeaderboard] = useState([]);
+    // const [loading, setLoading] = useState(true);
+    // const [leaderboard, setLeaderboard] = useState([]);
 
     
-    if (loading) {
-        return <div className='container-xxl container-height border text-white mb-2 align-items-center justify-content-center'>
-            <h1 className='display 2'>No data</h1>
-        </div>
-    }
+    // if (loading) {
+    //     return <div className='container-xxl container-height border text-white mb-2 align-items-center justify-content-center'>
+    //         <h1 className='display 2'>No data</h1>
+    //     </div>
+    // }
 
   return (
   <>
