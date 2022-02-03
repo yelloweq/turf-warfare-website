@@ -1,0 +1,6 @@
+h1 {
+color: white; 
+font-family: "Lucida Console", Courier, monospace;
+text-align: center;
+
+}

@@ -1,0 +1,10 @@
+.contact{
+text-align: center;
+background-image: url("../../resources/img/home.png");
+background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: block;
+}

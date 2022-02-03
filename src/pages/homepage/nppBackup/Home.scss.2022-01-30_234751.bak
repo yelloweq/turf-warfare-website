@@ -1,0 +1,12 @@
+
+	.landing {
+		display: block;
+		background-image: url("../../resources/img/home.png"); /* source "https://mocah.org/530215-video-game-battlefield.html" */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+		
+
+		

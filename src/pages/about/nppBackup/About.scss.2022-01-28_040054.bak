@@ -1,0 +1,17 @@
+h1 {
+color: white; 
+font-family: "Lucida Console", Courier, monospace;
+text-align: center;
+font-size: 5vw;
+  font-size: 5vh
+
+}
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}

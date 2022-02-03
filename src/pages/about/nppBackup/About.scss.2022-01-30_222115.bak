@@ -1,0 +1,58 @@
+.about{
+display: block;
+		background-image: url("../../resources/img/home.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 100%;
+		width: 100%;
+		}
+
+
+.about h1 {
+color: white; 
+font-family: "Lucida Console", Courier, monospace;
+text-align: center;
+font-size: 5vw;
+  font-size: 5vh
+  
+
+}
+.about h2 {
+color: gold;
+
+}
+
+.about .container{
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  text-align: center;
+   background-color: #474e5d;
+    color: white;
+	 margin-bottom: 16px;
+	
+  }
+
+
+.about .button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+.about .button:hover {
+   box-shadow: rgb(64, 189, 249) 0px -4px 0px inset;
+      }
+
+
+
+
+
+
+
+

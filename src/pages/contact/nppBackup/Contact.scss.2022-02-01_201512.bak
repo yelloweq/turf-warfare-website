@@ -1,0 +1,4 @@
+.contact{
+text-align: center;
+background-image: url("../../resources/img/home.png");
+}
