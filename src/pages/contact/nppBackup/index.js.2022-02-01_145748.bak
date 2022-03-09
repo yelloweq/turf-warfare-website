@@ -1,0 +1,42 @@
+import React from 'react';
+import './Contact.scss';
+
+function Contact() {
+  return (
+  <>
+   <div class="form-container">
+    <h2>Book Event</h2>
+    <form method="post"> <!--form call's itself when run to check for errors etc.-->
+      <input type="text" name="name" placeholder="Your Name"><!--Creates a name input field and assigns answer to $name-->
+      <input type="text" name="email" placeholder="Your Email"<!--Creates an email input field and assigns input to $email-->
+	  <span class="error">* <?php echo $emailErr;?></span><br><!--Displays email errors if any-->
+      <label> Select Event Time<br></label>
+      <input type="radio" name="time" value="09:00" id="option" <?php if (isset($time) && $time=="09:00") echo "checked";?>>
+        <label>09:00</label><!--This section creates a number of options to chose. Assigns the one clicked to $time.-->
+      <input type="radio" name="time" value="12:00" id="option" <?php if (isset($time) && $time=="12:00") echo "checked";?>>
+        <label>12:00</label>
+		 <input type="radio" name="time" value="15:00" id="option" <?php if (isset($time) && $time=="15:00") echo "checked";?>>
+        <label>15:00</label><br>
+		<span class="error">* <?php echo $timeErr;?></span> <br><!--Checks if time is empty and displays errors, if any.-->
+		
+		<!--Creates a select list for the categories-->
+      <select name="cat" id="cat" onchange="populate(this.id,'event')"><!--Calls the function when a Cat is chosen.-->
+        <option value="">Select Event Category</option> <!--The different categories-->
+        <option value="Sports">Sports</option>
+        <option value="Culture">Culture</option>
+        <option value="Other">Other</option>
+      </select><br>
+	  
+	  <label> Select Event<br></label><!--Creates an event list to be chosen-->
+	  <select name="event" id="event"  value="<?php echo $event;?>"></select><br><!--Events are displayed depending on the category chosen.-->
+	  <span class="error">* <?php echo $eventErr;?></span> <br> <!--Error is given if event is not chosen-->
+      <input type="submit" name="submit" value="Book Event" id="book"><!--submit button to submit form-->
+    </form>
+	
+  </div> 
+  
+  </>
+)
+}
+
+export default Contact;

@@ -1,0 +1,23 @@
+
+	
+	
+	.landing {
+		display: block;
+		background-image: url("../../resources/img/home.png"); /* source "https://mocah.org/540574-trenches-video.html" */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+		
+
+		.play-wrapper {
+			text-shadow: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+		}
+	}
+

@@ -1,0 +1,25 @@
+
+    .logo {
+        padding: 0 16px 0 16px;
+        height: 100%;
+        line-height: 80px;
+        margin: 0 1.5em;
+        vertical-align: middle;
+        text-decoration: none;
+        color: gray;
+        font-size: 18px;
+		
+    }
+	
+	.logo {
+		display: block;
+		background-image: url("../../resources/img/logo.png"); 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: right;		
+	}
+
+   

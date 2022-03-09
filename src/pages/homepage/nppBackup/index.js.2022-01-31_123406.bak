@@ -1,0 +1,40 @@
+import React from 'react'
+import { useAuth } from '../../contexts/AuthContext'
+import { Link } from 'react-router-dom'
+import './Home.scss'
+
+
+export default function Home() {
+    const { currentUser } = useAuth()
+
+
+    return (
+       <div class="landing">
+
+            <div class="join"><img src="../../resources/img/logo.png" alt="Logo" class="center"></div>
+			<div class ="text">
+                <h1 className='display-4 fw-bold 1h-1 mb-3'>Trench Warfare</h1>    
+                <h2>
+                Experience a unique battle against formidable opponents<br/> and start your journey to becoming the king of the bloody hills<br/> by using everything to your adavntage!
+                <br />
+                <br />
+                Build out your base and weapons by earning resources during the fight to dominate the battle field.
+                <br />
+                Cannons, Guns, Grenades. Trench Warfare has it all!
+                <br />
+                <br />
+                Get out there and show yourself on the leaderboards today!
+                </h2>
+                <div className="play-wrapper">
+                {currentUser ? 
+                <Link className="play-button" to="/play-now">Play for free</Link> : <Link className="play-button" to="/signup">Play Now</Link> }
+                </div>
+				</div>
+            </div>
+         
+		
+            
+       
+       
+    )
+}

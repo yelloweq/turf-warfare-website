@@ -1,0 +1,18 @@
+import React from 'react';
+import './Contact.scss';
+
+function Contact() {
+  return (
+  <>
+<div class="form-container">
+
+ <input type="text" name="name" placeholder="Your Name"/><br/>
+ <input type="text" name="email" placeholder="Your Email"/>
+<textarea id="subject" name="subject"></textarea>
+
+</div>  
+  </>
+)
+}
+
+export default Contact;

@@ -1,0 +1,14 @@
+
+    .logo {
+        padding: 0 16px 0 16px;
+        height: 100%;
+        line-height: 80px;
+        margin: 0 1.5em;
+        vertical-align: middle;
+        text-decoration: none;
+        color: gray;
+        font-size: 18px;
+		
+    }
+
+   

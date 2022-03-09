@@ -1,0 +1,51 @@
+
+.about h1 {
+color: white; 
+font-family: "Lucida Console", Courier, monospace;
+text-align: center;
+font-size: 5vw;
+  font-size: 5vh
+
+}
+.about .container11 {
+  display: table;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+    float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+  color: white;
+  background-color: #474e5d;
+  margin: auto;
+  padding: 10px;
+
+}
+.about .container{
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+  text-align: center;
+   background-color: #474e5d;
+  }
+
+
+.about .button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+
+
+
+
+

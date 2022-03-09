@@ -1,0 +1,190 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Trench Warfare</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/* This is set so the automatic background aligns with the sceen size.*/
+body, html{
+	height: 100%; 
+	margin: 0;
+
+}
+
+
+.footer {
+  position: absolute; 
+  left: 25%; 
+  bottom: 0;
+  width: 50%; /* Chose this so it can adjust as the screen is resized.*/
+  background-color: rgb(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 10px;
+
+  
+}
+
+.footer p{
+opacity: 1;
+
+}
+
+
+
+
+.nav{
+    list-style:none;
+    margin:0; /* This ensures no gaps.*/
+    padding:0; /* Ensures no space.*/
+    text-align:center;
+font-family: 'Alfa Slab One', cursive;
+ overflow: hidden;
+ font-size: 17px;
+
+
+  background: rgba(0, 0, 0, 0.5); 
+
+
+}
+
+.nav a:hover {
+ 
+  color: white;
+
+}
+
+.nav li{
+    display:inline;
+	
+}
+
+.nav a{
+    display:inline-block;
+    padding:10px;
+	 color: gold;
+	 text-decoration: none;	
+}
+
+.logo{
+	 
+position:relative;
+  background-size: cover; 
+height: auto;
+
+
+   
+  
+
+}
+
+.home{
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("home.jpg"); 
+}
+
+span{
+
+color: gold;
+font-size: 15px;
+font-weight: bold;
+
+}
+span1{
+color: gold;
+font-weight: bold;
+
+}
+span2{
+color: gold;
+font-weight: bold;
+}
+.right {
+	width: 45%;
+
+
+  position: relative;
+  top: 9%;
+  float: right;
+  color: gold;
+  font-size: 5vw;
+  font-size: 5vh;
+  font-weight: bold;
+  text-align: center;
+background: rgba(0, 0, 0, 0.15);
+border-radius: 15px;  
+}
+.right p{
+	font-family: 'Alfa Slab One', cursive;
+	font-size: 2.6vw;
+	font-size: 2.6vh;
+	font-weight: normal;
+	color: white;
+	
+}
+#play {
+color: gold;
+background-color: black;
+font-weight: 700;
+border-radius: 5px;
+font-size: 4vw; 
+font-size: 3vh;
+cursor: pointer; 
+border: 1px solid #FFFFFF;
+}
+
+
+</style>
+</head>
+
+
+<body>
+
+<div class="home">
+<!--The nav class where the nav bar is created as a list.-->
+<ul class="nav">
+  <li><a href="home.html">Home</a></li>
+  <li><a href="blog.html">Blog</a></li>
+  <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+
+  </ul>
+  <div class="right">Trench Based Warfare
+<p>Trench Warfare is an award winning turn based strategy game about building a base and going into combat. With thousands of players, it is one of the most thrilling strategy  games.
+You play as one of 2 soldiers initially armed with your base and only a cannon, you'll need to focus on your aim and power in order
+ to defeat your enemy! Hit your opponent to knock them off their base or wear down their health until they fall! Earn points by making tactical shots in order to unlock a vast variety of weapons and upgrade your Base!
+ <br>Cannons, Guns, Grenades. Trench Warfare has it all!
+</p>
+<input type="button" value="Play Now" onclick="openWin2()" id="play">
+</form>
+<script>
+//Java script function which will open the play now webpage.
+function openWin2() {
+location.href = "";}</script>
+</div>
+<!--The logo class where the logo is added. -->
+<div class="logo"><img src="logo.png" width="40%" height="auto" alt="logo">
+</div>
+</div>
+
+
+
+
+ <!--The footer class where the footer is created.-->
+  <div class="footer">
+  <p><span>Contact Us</span><br>
+ <span1> Email:</span1> Trench-warfare@aston.ac.uk<br>
+  <span2>University Address: </span2> Aston St, Birmingham B4 7ET<br>
+  Copyright © 2021 Trench Warfare. All rights reserved.</p>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+import React from 'react';
+import './About.scss';
+
+function About() {
+  return (
+      <>
+      <section className='hero'>
+            <h1>
+                Meet the team
+            </h1>
+			 <div class="container">
+        <h2>Bob </h2>
+        <p class="title">GAme Designer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>bob@example.com</p>
+        <p><button class="button">Contact</button></p></div>
+			
+      </section>
+      </>
+  )}
+
+export default About;
