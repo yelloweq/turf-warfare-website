@@ -1,28 +1,37 @@
 import React from 'react'
 import './Header.scss';
 import { Link } from 'react-router-dom';
+import mylogo from '../../resources/img/logo.png'
+import { useAuth } from '../../contexts/AuthContext'
 
 
 
 function Header(props) {
+    const { currentUser, logout } = useAuth()
+    
     return (
-        <header className="d-flex align-items-center justify-content-center justify-content-md-between py-3 text-white">
-            <div className='d-flex col-1 justify-content-center'>
-                <a href="/" className="logo">logo</a>
+        <header className="container d-flex align-items-center justify-content-center justify-content-between m-0 text-white">
+            <div className='d-flex align-items-center justify-content-center'>
+                <a href="/" className="logo ms-2">
+                    <img src={mylogo} width={100} alt="cannon logo"></img>
+                </a>
             </div>
             
 
             {props.children}
 
-            <div className='me-5'>
-                <Link to="/login" className="btn btn-outline-primary me-5">Sign In</Link>
-
-                <Link to="/login" className="btn btn-primary">Play Now</Link>
+            <div className='col-2 d-flex justify-content-between m-0'>
+                {currentUser ?
+                <button onClick={logout} className="btn btn-outline-primary">Log out</button>
+                : <></>
+                }
+                 {currentUser ? 
+                <Link to="/logo192.png" target="_blank" className="btn btn-primary" download>Download</Link>
+                : <Link to="/signup" className="btn btn-outline-primary">Sign up</Link>
+                 }
+                 
+                
             </div>
-            
-                
-                
-           
         </header>
     )
 }

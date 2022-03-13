@@ -10,11 +10,9 @@ export default function Home() {
 
 
     return (
-       <div class="landing">
-	   <img id="logo1" src={logo1} alt="Logo" class="center"></img>
-<div class ="text">
-        
-		
+       <div className="landing">
+	   <img id="logo1" src={logo1} alt="Logo" className="center"></img>
+        <div className ="text">
                 <h1 className='display-4 fw-bold 1h-1 mb-3'>Trench Warfare</h1>    
                 <h2>
                 Experience a unique battle against formidable opponents<br/> and start your journey to becoming the king of the bloody hills<br/> by using everything to your adavntage!
@@ -29,7 +27,7 @@ export default function Home() {
                 </h2><br/><br/><br/><br/>
                 <div className="play-wrapper">
                 {currentUser ? 
-                <Link className="play-button" to="/play-now">Play for free</Link> : <Link className="play-button" to="/signup">Play Now</Link> }
+                <Link className="play-button" to="/play-now">Download</Link> : <Link className="play-button" to="/signup">Sign up</Link> }
                 </div>
 				</div>
             </div>

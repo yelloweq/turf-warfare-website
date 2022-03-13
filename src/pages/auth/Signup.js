@@ -8,10 +8,11 @@ function Signup() {
     const emailRef = useRef()
     const passwordRef = useRef()
     const confirmPasswordRef = useRef()
-    const { signup } = useAuth()
+    const { signup, signupWithGoogle } = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const history = useHistory()
+
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -30,6 +31,19 @@ function Signup() {
         }
         setLoading(false)
     }
+
+    async function handleGoogleSignup() {
+        
+        try {
+            setError('')
+            setLoading(true)
+            await signupWithGoogle()
+            history.push("/")
+        } catch {
+            setError("Google failed to create account")
+        }
+    }
+    
     return (
         <div className="signup-outer-wrapper">
         <div className="signup-container">
@@ -56,7 +70,9 @@ function Signup() {
                         <FaFacebook size={26} color="#fff"/>
                     </div>
                     <div className="google">
+                        <button className='service-login-button' onClick={handleGoogleSignup}>
                         <FaGoogle size={26}/>
+                        </button>
                     </div>
                     <div className="apple">
                         <FaApple size={26}/>
