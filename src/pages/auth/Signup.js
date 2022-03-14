@@ -8,7 +8,7 @@ function Signup() {
     const emailRef = useRef()
     const passwordRef = useRef()
     const confirmPasswordRef = useRef()
-    const { signup, signupWithGoogle } = useAuth()
+    const { signup, signupWithGoogle, signupWithTwitter, signupWithFacebook } = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const history = useHistory()
@@ -43,6 +43,31 @@ function Signup() {
             setError("Google failed to create account")
         }
     }
+
+        async function handleTwitterSignup() {
+        
+            try {
+                setError('')
+                setLoading(true)
+                await signupWithTwitter()
+                history.push("/")
+            } catch {
+                setError("Google failed to create account")
+            }
+        }
+            
+            async function handleFacebookSignup() {
+        
+                try {
+                    setError('')
+                    setLoading(true)
+                    await signupWithFacebook()
+                    history.push("/")
+                } catch {
+                    setError("Google failed to create account")
+                }
+            }
+    
     
     return (
         <div className="signup-outer-wrapper">
@@ -67,7 +92,10 @@ function Signup() {
 
                 <div className="social">
                     <div className="facebook">
+                        <button className='service-login-button' onClick={handleFacebookSignup}>
                         <FaFacebook size={26} color="#fff"/>
+                        </button>
+                        
                     </div>
                     <div className="google">
                         <button className='service-login-button' onClick={handleGoogleSignup}>
@@ -75,7 +103,9 @@ function Signup() {
                         </button>
                     </div>
                     <div className="apple">
+                        <button className='service-login-button' onClick={handleTwitterSignup}>
                         <FaApple size={26}/>
+                        </button>
                     </div>
                 </div>
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { auth } from '../config/firebase'
-import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
+import { signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, TwitterAuthProvider } from 'firebase/auth'
 
 const AuthContext = React.createContext()
 
@@ -26,6 +26,18 @@ export function AuthProvider({ children }) {
         signInWithPopup(auth, provider)
     }
 
+    function signupWithFacebook() {
+        const provider = new FacebookAuthProvider()
+
+        signInWithPopup(auth, provider)
+    }
+
+    function signupWithTwitter() {
+        const provider = new TwitterAuthProvider()
+
+        signInWithPopup(auth, provider)
+    }
+
     function logout(){
         return auth.signOut()
     }
@@ -45,7 +57,9 @@ export function AuthProvider({ children }) {
         login,
         signup,
         logout,
-        signupWithGoogle
+        signupWithGoogle,
+        signupWithTwitter,
+        signupWithFacebook
     }
     return (
         <AuthContext.Provider value={value}>
