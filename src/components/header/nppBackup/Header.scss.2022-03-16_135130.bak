@@ -13,7 +13,7 @@
 	
 	.logo {
 		display: block;
-		
+		background-image: url("../../resources/img/logo.png"); 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

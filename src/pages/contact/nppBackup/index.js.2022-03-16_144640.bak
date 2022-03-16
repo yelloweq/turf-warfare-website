@@ -6,7 +6,7 @@ function Contact() {
   <>
   <div class="contact">
   <div class="form">
-  <form action="mail.php" method="post">
+  <form action="contact/mail.php" method="post">
   <h1>
                 Contact Us
             </h1>
