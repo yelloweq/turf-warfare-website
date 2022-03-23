@@ -6,7 +6,7 @@ function Contact() {
   <>
   <div class="contact">
   <div class="form">
-  <form action="mail.php" method="post">
+  <form id="form" method="post">
   <h1>
                 Contact Us
             </h1>
@@ -16,10 +16,12 @@ function Contact() {
 <textarea id="message" name="message" placeholder="Enter your Message"></textarea><br/><br/>
 <input type="submit" name="submit" value="Submit" id="submit"/>
 </form>
+
 </div>
 </div>  
   </>
 )
 }
+
 
 export default Contact;

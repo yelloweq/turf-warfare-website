@@ -1,0 +1,88 @@
+
+	
+	.landing {
+		display: block;
+		background-image: url("../../resources/img/home.png"); /* source "https://mocah.org/540574-trenches-video.html" */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: right;		
+	}
+	
+	.landing h1{
+	color: gold;
+	font-family: Lucida Handwriting;}
+	
+ .landing h2  {
+  text-align: right;
+  font-size: 20px;
+  color: white;
+  font-family: cursive;
+  }
+  
+.center{	 
+top: -50px;
+position:relative;
+  background-size: cover; 
+height: auto;
+width:30%;
+float: left;
+filter: brightness(80%);
+
+
+}
+
+.text{
+padding-right: 30px;
+}
+  
+
+
+  
+.play-wrapper {
+			text-shadow: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.play-button {
+				margin: 30px;
+				text-decoration: none;
+				color: #f9f9f9;
+				font-weight: 800;
+				letter-spacing: 0.1em;
+				border-radius: 2px;
+				line-height: 16px;
+				padding: 12px 0;
+				background-color: rgb(64, 189, 249);
+				min-width: 229px;
+				max-width: 320px;
+				font-size: 14px;
+				text-overflow: ellipsis;
+				text-align: center;
+				vertical-align: middle;
+				text-transform: uppercase;
+			
+				float: center;
+			}
+		}
+		
+		.column {
+  float: left;
+  width: 33.3%;
+  padding: 30px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  float: center;
+
+}
+img {
+	  width: 100%;
+	}	
+		

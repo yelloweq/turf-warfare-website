@@ -1,0 +1,30 @@
+import React from 'react';
+import './Contact.scss';
+src="jquery-1.9.1.min.js"
+function Contact() {
+  return (
+  <>
+  <div class="contact">
+  <div class="form">
+  <form id="form" method="post">
+  <h1>
+                Contact Us
+            </h1>
+ <input type="text" name="name" placeholder="Your Name"/><br/><br/>
+ <input type="email" name="email" placeholder="Your Email" required/><br/><br/>
+ <input type="text" id="subject" name="subject" placeholder="Subject"/><br/><br/>
+<textarea id="message" name="message" placeholder="Enter your Message"></textarea><br/><br/>
+<input type="submit" name="submit" value="Submit" id="submit"/>
+</form>
+</div>
+</div>  
+  </>
+)
+$('#form').submit(function(event)
+{
+	location.href = 'mail.php';
+}
+}
+
+
+export default Contact;
