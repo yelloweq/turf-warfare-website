@@ -10,7 +10,7 @@ function Post({ match }) {
     const [currentPost, setCurrentPost] = useState();
 
     useEffect(() => {
-        firebase.firestore().collection("Posts").where("slug", "==", match.params.slug).get().then(snap => {
+        firebase.firestore().collection("Blog").where("slug", "==", match.params.slug).get().then(snap => {
             setCurrentPost((snap.docs[0]));
             setLoading(false);
             

@@ -7,6 +7,7 @@ import { Link, useHistory } from 'react-router-dom'
 function Signup() {
     const emailRef = useRef()
     const passwordRef = useRef()
+    // const usernameRef = useRef()
     const confirmPasswordRef = useRef()
     const { signup, signupWithGoogle, signupWithTwitter, signupWithFacebook } = useAuth()
     const [error, setError] = useState('')
@@ -20,6 +21,7 @@ function Signup() {
         if (passwordRef.current.value !== confirmPasswordRef.current.value) {
             return setError("Passwords do not match")
         }
+        
 
         try {
             setError('')
@@ -40,7 +42,7 @@ function Signup() {
             await signupWithGoogle()
             history.push("/")
         } catch {
-            setError("Google failed to create account")
+            setError("Google signup failed.")
         }
     }
 
@@ -52,7 +54,7 @@ function Signup() {
                 await signupWithTwitter()
                 history.push("/")
             } catch {
-                setError("Google failed to create account")
+                setError("Twitter signup failed.")
             }
         }
             
@@ -64,7 +66,7 @@ function Signup() {
                     await signupWithFacebook()
                     history.push("/")
                 } catch {
-                    setError("Google failed to create account")
+                    setError("Facebook signup failed.")
                 }
             }
     
@@ -76,6 +78,10 @@ function Signup() {
            
             {error && <h2>{error}</h2>}
             <form className="form" id="register_form" onSubmit={handleSubmit}>
+                {/* <div className="input-container">
+                    <input type="text" name="username" ref={ usernameRef } required />
+                    <label htmlFor="username">Username</label>
+                </div> */}
                 <div className="input-container">
                     <input type="text" name="email" ref={ emailRef } required />
                     <label htmlFor="email">Email</label>
@@ -121,7 +127,6 @@ function Signup() {
                     
                     {/* add link to register page and email verification */}
                 <div className="bottom-links">
-                    <p><Link to="/Login">Can't sign in?</Link></p>
                     <p><Link to="/Login">Already have an account?</Link></p>
                 </div>
             </form>

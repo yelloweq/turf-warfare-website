@@ -5,45 +5,45 @@ import './About.scss';
 function About() {
   return (
       <>
-      <div class="about">
+      <div className="about">
             <h1>
                 Meet The Team
             </h1>
-			<div class= "guy">
-			 <div class="container">
+			<div className= "guy">
+			 <div className="container">
         <h2>Bob </h2>
-        <p class="title">Game Designer<br/>
+        <p className="title">Game Designer<br/>
         Some text that describes me lorem ipsum ipsum lorem.<br/>
          bob@example.com</p>
-        <p><button class="button">Contact</button></p></div>
+        <p><button className="button">Contact</button></p></div>
 		
-		<div class="container">
+		<div className="container">
         <h2>Bob </h2>
-        <p class="title">Game Designer<br/>
+        <p className="title">Game Designer<br/>
         Some text that describes me lorem ipsum ipsum lorem.<br/>
          bob@example.com</p>
-        <p><button class="button">Contact</button></p></div>
+        <p><button className="button">Contact</button></p></div>
 		
-		<div class="container">
+		<div className="container">
         <h2>Bob </h2>
-        <p class="title">Game Designer<br/>
+        <p className="title">Game Designer<br/>
         Some text that describes me lorem ipsum ipsum lorem.<br/>
          bob@example.com</p>
-        <p><button class="button">Contact</button></p></div>
+        <p><button className="button">Contact</button></p></div>
 		
-		<div class="container">
+		<div className="container">
         <h2>Bob </h2>
-        <p class="title">Game Designer<br/>
+        <p className="title">Game Designer<br/>
         Some text that describes me lorem ipsum ipsum lorem.<br/>
          bob@example.com</p>
-        <p><button class="button">Contact</button></p></div>
+        <p><button className="button">Contact</button></p></div>
 		
-		<div class="container">
+		<div className="container">
         <h2>Bob </h2>
-        <p class="title">Game Designer<br/>
+        <p className="title">Game Designer<br/>
         Some text that describes me lorem ipsum ipsum lorem.<br/>
          bob@example.com</p>
-        <p><button class="button">Contact</button></p></div>
+        <p><button className="button">Contact</button></p></div>
 		
 
 		
