@@ -13,6 +13,9 @@ import Dashboard from './pages/dashboard';
 import About from './pages/about'
 import Leaderboard from './pages/leaderboard'
 import Contact from './pages/contact';
+import PatchNotes from './pages/patchnotes';
+import Patch from './components/patch';
+import Howtoplay from './pages/howtoplay';
 
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
           <Route path="/signup" component={Signup} />
           <Route exact path="/blog" component={Blog} />
           <Route path="/blog/:slug" component={Post} />
+          <Route exact path="/patch-notes" component={PatchNotes}/>
+          <Route exact path="/how-to-play" component={Howtoplay}/>
+          <Route path="/patch-notes/:slug" component={Patch}/>
           <Route path="/leaderboard" component={Leaderboard} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />

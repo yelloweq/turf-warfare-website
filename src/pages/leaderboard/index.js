@@ -1,10 +1,25 @@
-import React from 'react';
-import './Leaderboard.scss';
+// import { onValue, getDatabase, query, ref, orderByChild, orderBy } from 'firebase/database'
+import React from 'react'
+// import { useAuth } from '../../contexts/AuthContext'
+import './Leaderboard.scss'
 
 function Leaderboard() {
 
-    // const [loading, setLoading] = useState(true);
-    // const [leaderboard, setLeaderboard] = useState([]);
+    // const [loading, setLoading] = useState(true)
+    // const [leaderboard, setLeaderboard] = useState([])
+    // const { currentUser } = useAuth()
+
+    // useEffect(() => {
+    //   if (currentUser) {
+    //     const db = getDatabase();
+    //     const mostWins = query(ref(db, 'users/'));
+    //     onValue(mostWins, (snapshot) => {
+    //       console.log(snapshot.val())
+    //       const data = snapshot.val()
+    //       // console.log(data);
+    //     })
+    //   }
+    // }, [])
 
     
     // if (loading) {
@@ -20,12 +35,12 @@ function Leaderboard() {
       </div>
     <div className='container-xxl text-white justify-content-center'>
             <nav aria-label="pages">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item"><a class="page-link" href="/leaderboard">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="/leaderboard">1</a></li>
-                    <li class="page-item"><a class="page-link" href="/leaderboard">2</a></li>
-                    <li class="page-item"><a class="page-link" href="/leaderboard">3</a></li>
-                    <li class="page-item"><a class="page-link" href="/leaderboard">Next</a></li>
+                <ul className="pagination justify-content-center">
+                    <li className="page-item"><a className="page-link" href="/leaderboard">Previous</a></li>
+                    <li className="page-item"><a className="page-link" href="/leaderboard">1</a></li>
+                    <li className="page-item"><a className="page-link" href="/leaderboard">2</a></li>
+                    <li className="page-item"><a className="page-link" href="/leaderboard">3</a></li>
+                    <li className="page-item"><a className="page-link" href="/leaderboard">Next</a></li>
                 </ul>
             </nav>
     </div>

@@ -11,7 +11,7 @@ function Blog() {
     const [blogposts, setBlogposts] = useState([]);
 
     useEffect(() => {
-        firebase.firestore().collection("Posts").orderBy("createdAt").get().then(snap => {
+        firebase.firestore().collection("Blog").orderBy("createdAt").get().then(snap => {
             let posts = [];
             snap.docs.forEach(doc => {
                 posts.push({ ...doc.data(), id: doc.id })
@@ -35,8 +35,8 @@ function Blog() {
                         {blogposts ? (
                             blogposts.map((blogpost) => {
                                 return (
-                                    <li className="item">
-                                        <article key={blogpost.id} className="post-container">
+                                    <li className="item" key={blogpost}>
+                                        <article className="post-container">
                                             <Link to={`/blog/${blogpost.slug}`}>
                                                 <div className="image">
                                                     {/* <img src={blogpost.coverImage} alt={blogpost.coverImageAl} /> */}
