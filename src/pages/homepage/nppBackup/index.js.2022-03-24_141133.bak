@@ -33,7 +33,7 @@ export default function Home() {
 {currentUser ? 
                 <Link className="play-button" to="/play-now">Download</Link> : <Link className="play-button" to="/signup">Play Now</Link> }
 
-                </div></div><br/><br/><br/>
+                </div></div><br/><br/><br/><br/>
                 
                 
 	

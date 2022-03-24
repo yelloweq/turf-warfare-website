@@ -1,0 +1,13 @@
+import React from 'react'
+import './howtoplay.scss'
+
+function Howtoplay() {
+  return (
+    <div className= "howtoplay">
+	<div className= "container">
+	<h1> How To Play </h1>
+	</div>
+  )
+}
+
+export default Howtoplay

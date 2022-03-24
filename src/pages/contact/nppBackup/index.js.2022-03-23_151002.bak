@@ -1,14 +1,13 @@
 import React from 'react';
 import './Contact.scss';
+import pic1 from'../../resources/img/Capture2.png'
+import pic2 from'../../resources/img/Capture3.png'
+import pic3 from'../../resources/img/Capture4.png'
 
 function Contact() {
   return (
   <>
   <div class="contact">
-  <br/>
-
-
-
   <div class="form">
   <form id="form" method="post">
   <h1>
@@ -19,13 +18,15 @@ function Contact() {
  <input type="text" id="subject" name="subject" placeholder="Subject"/><br/><br/>
 <textarea id="message" name="message" placeholder="Enter your Message"></textarea><br/><br/>
 <input type="submit" name="submit" value="Submit" id="submit"/>
-</form><br/>
-
+</form>
 
 </div>
-<br/>
-
-
+<div className="row">		
+<img id="logo1" src={pic1} alt="Logo" className="column"></img>
+<div className="column">	
+<img id="logo1" src={pic2} alt="Logo"></img></div>
+<div className="column">	
+<img id="logo1" src={pic3} alt="Logo"></img></div></div>
 </div>  
   </>
 )

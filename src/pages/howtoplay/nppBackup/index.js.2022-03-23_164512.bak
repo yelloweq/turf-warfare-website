@@ -1,0 +1,44 @@
+import React from 'react'
+import './howtoplay.scss'
+import pic1 from'../../resources/img/Capture2.png'
+import pic2 from'../../resources/img/Capture3.png'
+import pic3 from'../../resources/img/Capture4.png'
+
+function Howtoplay() {
+  return (
+    <div className= "howtoplay">
+	<div className= "container">
+	<h1> How To Play </h1>
+	<p>wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+	wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+	wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+	
+	
+
+	ee
+	<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+	eeeeeeeeeeeeeee
+	eeeeeeeeeeeeeeeeee
+	eee</p>
+	 <div className="row">		
+<img id="logo1" src={pic1} alt="Logo" className="column"></img>
+<div className="column">	
+<img id="logo1" src={pic2} alt="Logo"></img></div>
+<div className="column">	
+<img id="logo1" src={pic3} alt="Logo"></img></div></div>
+
+	</div>
+	</div>
+  )
+}
+
+export default Howtoplay

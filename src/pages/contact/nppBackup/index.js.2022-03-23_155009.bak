@@ -6,8 +6,8 @@ function Contact() {
   <>
   <div class="contact">
   <br/>
-
-
+<br/>
+<br/>
 
   <div class="form">
   <form id="form" method="post">
@@ -24,7 +24,9 @@ function Contact() {
 
 </div>
 <br/>
-
+<br/>
+<br/>
+<br/>
 
 </div>  
   </>

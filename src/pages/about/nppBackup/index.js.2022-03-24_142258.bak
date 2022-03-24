@@ -1,0 +1,85 @@
+import React from 'react';
+import './About.scss';
+
+
+function About() {
+  return (
+      <>
+      <div className="about">
+            <h1>
+                Meet The Team
+            </h1>
+			<div className= "guy">
+			 <div className="container">
+        <h2>Iwo Grzes  </h2>
+        <p className="title">Game Designer<br/>
+        Some text that describes me lorem ipsum ipsum lorem.<br/>
+         bob@example.com</p>
+        <p><button className="button">Contact</button></p></div>
+		
+		<div className="container">
+        <h2>Qasim Qasmi </h2>
+        <p className="title">Game Designer<br/>
+        Some text that describes me lorem ipsum ipsum lorem.<br/>
+         bob@example.com</p>
+        <p><button className="button">Contact</button></p></div>
+		
+		<div className="container">
+        <h2>Arandeep Gill </h2>
+        <p className="title">Game Designer<br/>
+        Some text that describes me lorem ipsum ipsum lorem.<br/>
+         bob@example.com</p>
+        <p><button className="button">Contact</button></p></div>
+		
+		<div className="container">
+        <h2>Ful Miah </h2>
+        <p className="title">Game Designer<br/>
+        Some text that describes me lorem ipsum ipsum lorem.<br/>
+         bob@example.com</p>
+        <p><button className="button">Contact</button></p></div>
+		
+		<div className="container">
+        <h2>Mandeep Shergill </h2>
+        <p className="title">Game Designer<br/>
+        Some text that describes me lorem ipsum ipsum lorem.<br/>
+         bob@example.com</p>
+        <p><button className="button">Contact</button></p></div>
+		
+		<div className="container">
+        <h2>Ayub Wahab </h2>
+        <p className="title">Game Designer<br/>
+        Some text that describes me lorem ipsum ipsum lorem.<br/>
+         bob@example.com</p>
+        <p><button className="button">Contact</button></p></div>
+		
+		<div className="container">
+        <h2>Hunain Chaudhry </h2>
+        <p className="title">Game Designer<br/>
+        Some text that describes me lorem ipsum ipsum lorem.<br/>
+         bob@example.com</p>
+        <p><button className="button">Contact</button></p></div>
+		
+		<div className="container">
+        <h2>Ali Abdalrahman </h2>
+        <p className="title">Game Designer<br/>
+        Some text that describes me lorem ipsum ipsum lorem.<br/>
+         bob@example.com</p>
+        <p><button className="button">Contact</button></p></div>
+		
+		<div className="container">
+        <h2>Adnan Ghelle </h2>
+        <p className="title">Game Designer<br/>
+        Some text that describes me lorem ipsum ipsum lorem.<br/>
+         bob@example.com</p>
+        <p><button className="button">Contact</button></p></div>
+		
+
+		
+		
+		
+		</div>	
+      </div>
+      </>
+  )}
+
+export default About;

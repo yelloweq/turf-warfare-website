@@ -1,0 +1,27 @@
+.howtoplay{
+display: block;
+		background-image: url("../../resources/img/about.png"); /* source "https://mocah.org/540574-trenches-video.html" */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+		}
+
+
+
+.howtoplay .container{
+  margin: auto;
+
+  padding: 10px;
+  text-align: center;
+   background-color: #474e5d;
+    color: white;
+	 margin-bottom: 16px;
+	 background: rgba(0, 0, 0, 0.65);
+	 border-radius: 15px;
+	
+  }
+  
+  .howtoplay h1{ color:gold;}

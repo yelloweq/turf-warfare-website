@@ -33,12 +33,17 @@ export default function Home() {
 {currentUser ? 
                 <Link className="play-button" to="/play-now">Download</Link> : <Link className="play-button" to="/signup">Play Now</Link> }
 
-                </div></div><br/><br/><br/>
+                </div></div>
                 
                 
 	
 
-				
+				 <div className="row">		
+<img id="logo1" src={pic1} alt="Logo" className="column"></img>
+<div className="column">	
+<img id="logo1" src={pic2} alt="Logo"></img></div>
+<div className="column">	
+<img id="logo1" src={pic3} alt="Logo"></img></div></div>
 
             </div>
 			
