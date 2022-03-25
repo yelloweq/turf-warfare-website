@@ -5,10 +5,6 @@ function Contact() {
   return (
   <>
   <div class="contact">
-  <br/>
-
-
-
   <div class="form">
   <form id="form" method="post">
   <h1>
@@ -24,7 +20,9 @@ function Contact() {
 
 </div>
 <br/>
-
+<br/>
+<br/>
+<br/>
 
 </div>  
   </>

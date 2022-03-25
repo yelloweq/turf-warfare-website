@@ -1,0 +1,35 @@
+import React from 'react'
+import './howtoplay.scss'
+
+function Howtoplay() {
+  return (
+    <div className= "howtoplay">
+	<div className= "container">
+	<h1> How To Play </h1>
+	<p>wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+	wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+	wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+	
+	
+
+	ee
+	<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+	eeeeeeeeeeeeeee
+	eeeeeeeeeeeeeeeeee
+	eee</p>
+
+	</div>
+	</div>
+  )
+}
+
+export default Howtoplay

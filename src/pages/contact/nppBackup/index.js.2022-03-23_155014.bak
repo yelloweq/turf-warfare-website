@@ -6,7 +6,7 @@ function Contact() {
   <>
   <div class="contact">
   <br/>
-
+<br/>
 
 
   <div class="form">
@@ -24,7 +24,9 @@ function Contact() {
 
 </div>
 <br/>
-
+<br/>
+<br/>
+<br/>
 
 </div>  
   </>

@@ -7,22 +7,14 @@ import pic5 from'../../resources/img/Capture5.png'
 function Howtoplay() {
   return (
     <div className= "howtoplay">
-	<br/>
 	<div className= "container">
 	<h1> How To Play </h1>
-	<p>Trench Warfare is a turn-based multiplayer game in which there are two players.<br/> Each player has a respective base.
-	The goal of the game is to defeat your enemies base while preserving your own.<br/> 
-	Canons are used to attack the opposing base.
-	Stack your money by attacking the enemy base.<br/> 
-	Upgrade your base from the upgrade box.
-	The first base health to diminish 
+	<p>Trench Warfare is a turn-based multiplayer game in which there are two players, each with there respective bases.
+	The goal of the game is to defeat your enemies base while preserving your own. The first base health to fall to 0 
 	is the loser.
-	<h1>Controls</h1>
-	WASD to walk around<br/>
-	E to interact with the canon<br/>
-	Left and Right arrows for horizontal canon control<br/>
-	Up and Down arrows for vertical canon control<br/>
-	... to fire the canon
+	Canons are used to attack the opposing base, the player will use the keys ..... to move the cannon and the key... to fire. 
+	Stack your money by attacking the enemy base.
+	Upgrade your base from the upgrade box.
 	
 	</p>
 	 <div className="row">		
@@ -33,7 +25,6 @@ function Howtoplay() {
 <img id="logo1" src={pic5} alt="Logo"></img></div></div>
 
 	</div>
-	<br/>
 	</div>
   )
 }

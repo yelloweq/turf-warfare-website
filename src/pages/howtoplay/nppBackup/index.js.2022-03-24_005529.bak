@@ -15,13 +15,13 @@ function Howtoplay() {
 	Canons are used to attack the opposing base.
 	Stack your money by attacking the enemy base.<br/> 
 	Upgrade your base from the upgrade box.
-	The first base health to diminish 
+	The first base health to fall to 0 
 	is the loser.
 	<h1>Controls</h1>
-	WASD to walk around<br/>
-	E to interact with the canon<br/>
-	Left and Right arrows for horizontal canon control<br/>
-	Up and Down arrows for vertical canon control<br/>
+	WASD to walk around
+	E to interact with the canon
+	Left and Right arrows for horizontal canon control
+	Up and Down arrows for vertical canon control
 	... to fire the canon
 	
 	</p>

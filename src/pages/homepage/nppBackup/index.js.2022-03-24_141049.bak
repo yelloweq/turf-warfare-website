@@ -30,29 +30,15 @@ export default function Home() {
                 Get out there and show yourself on the leaderboards today!
                 </h2>
 				<div className="play-wrapper">
+{currentUser ? 
+                <Link className="play-button" to="/play-now">Download</Link> : <Link className="play-button" to="/signup">Play Now</Link> }
 
-
-                {currentUser ? 
-                <Link className="play-button" to="/play-now">Download</Link>
-                : <Link className="play-button" to="/signup">Play Now</Link>
-                }
-
-                </div>
-                </div>
-
-                </div></div><br/><br/><br/>
-
+                </div></div>
                 
                 
-				<div className="row">		
-                    <img id="gamePreview" src={pic1} alt="Logo" className="column" />
-                    <div className="column">	
-                        <img id="gamePreview" src={pic2} alt="Logo"/>
-                    </div>
-                    <div className="column">	
-                        <img id="gamePreview" src={pic3} alt="Logo"/>
-                    </div>
-                </div>
+	
+
+				
 
             </div>
 			

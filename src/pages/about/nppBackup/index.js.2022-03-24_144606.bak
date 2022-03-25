@@ -56,7 +56,7 @@ function About() {
         <h2>Hunain Chaudhry </h2>
         <p className="title">Game Developer<br/>
         Hunain is a talented game developer that has designed multiple games in the past. Hunain is experienced in languages such as C Sharp and Java. Hunain currently studies Computer Science at Aston University<br/>
-         Hunain@example.com</p>
+         bob@example.com</p>
         <p><button className="button">Contact</button></p></div>
 		
 		<div className="container">
