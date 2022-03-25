@@ -3,9 +3,7 @@ import { useAuth } from '../../contexts/AuthContext'
 import { Link } from 'react-router-dom'
 import './Home.scss'
 import logo1 from'../../resources/img/logo.png'
-import pic1 from'../../resources/img/Capture2.png'
-import pic2 from'../../resources/img/Capture3.png'
-import pic3 from'../../resources/img/Capture4.png'
+
 
 
 
@@ -40,19 +38,8 @@ export default function Home() {
                 </div>
                 </div>
 
-                </div></div><br/><br/><br/>
+                <br/><br/><br/><br/><br/><br/>
 
-                
-                
-				<div className="row">		
-                    <img id="gamePreview" src={pic1} alt="Logo" className="column" />
-                    <div className="column">	
-                        <img id="gamePreview" src={pic2} alt="Logo"/>
-                    </div>
-                    <div className="column">	
-                        <img id="gamePreview" src={pic3} alt="Logo"/>
-                    </div>
-                </div>
 
             </div>
 			
