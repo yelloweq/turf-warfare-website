@@ -45,9 +45,32 @@ function Leaderboard() {
   return (
   <>
     <div className='container-xxl container-height border text-white mb-2'>
+      <div className='d-flex justify-content-center align-items-center text-center columns'>
+      <div className='col-3 justify-content-center'>Rank</div>
+      <div className='col-6 justify-content-center'>Username</div>
+      <div className='col-3 justify-content-center'>Wins</div>
+      </div>
+      
       {leaderboard ? (leaderboard.map((user) => {
         return (
-          <ul key={user.username}>{user.username} <span> {user.wins} </span> </ul>
+          <div className='d-flex justify-content-center align-items-center rows'> 
+          {(user.wins > 12) ? (
+            <>
+            <div className='col-3 godlike '> {leaderboard.indexOf(user) + 1}#</div>
+            <div className='col-6 godlike '>{user.username}</div>
+            <div className='col-3 godlike '> {user.wins} </div>
+            </>
+          ) : (
+            <>
+            <div className='col-3'> {leaderboard.indexOf(user) + 1}#</div>
+            <div className='col-6'>{user.username}</div>
+            <div className='col-3'> {user.wins} </div>
+            </>
+          )}
+
+          
+          </div>
+
           
         )
       })) : null }

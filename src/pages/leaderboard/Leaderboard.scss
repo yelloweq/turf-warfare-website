@@ -1,4 +1,27 @@
 .container-height{
     height: 80vh;
     background-color: rgb(51, 51, 51);
+    padding: 0;
+}
+
+.godlike{
+    color: red;
+    font-size: large;
+}
+
+.godlike:nth-child(2)::after{
+    content: "GODLIKE";
+    margin-left: 10px;
+}
+
+.columns{
+    background-color: gainsboro;
+    margin: 0;
+    color: black;
+    font-weight: 800;
+    
+}
+
+.rows{
+    padding: 0 10px 0 10px;
 }
