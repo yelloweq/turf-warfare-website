@@ -20,25 +20,26 @@ function Leaderboard() {
     }
 
     useEffect(() => {
-      if (currentUser) {
         const db = firebase.database().ref("users");
         db.on("value", (snapshot) => {
           const users = snapshot.val();
           const ranking = [];
           for  (let id in users){
+            if(currentUser && currentUser.email === users[id].email){
+              users[id].owner = true;
+            }
             ranking.push(users[id])
           }
-          ranking.sort(sortByWins)
+          ranking.sort(sortByWins);
           setLeaderboard(ranking);
           setLoading(false);
         })
-      }
-    }, [])
+    }, [currentUser])
 
     
     if (loading) {
         return <div className='container-xxl container-height border text-white mb-2 align-items-center justify-content-center'>
-            <h1 className='display 2'>No data</h1>
+            <h1 className='display 2'>Waiting for the server to return player stats.</h1>
         </div>
     }
 
@@ -50,22 +51,22 @@ function Leaderboard() {
       <div className='col-6 justify-content-center'>Username</div>
       <div className='col-3 justify-content-center'>Wins</div>
       </div>
-      
       {leaderboard ? (leaderboard.map((user) => {
         return (
-          <div className='d-flex justify-content-center align-items-center rows'> 
-          {(user.wins > 12) ? (
+          <div key={user.username} className='d-flex justify-content-center align-items-center'> 
+          {(user.wins > 11) ? (
             <>
-            <div className='col-3 godlike '> {leaderboard.indexOf(user) + 1}#</div>
-            <div className='col-6 godlike '>{user.username}</div>
-            <div className='col-3 godlike '> {user.wins} </div>
+            <div className={`rank col-3 godlike ${user.owner ? "owner" : ""}`}> {leaderboard.indexOf(user) + 1}#</div>
+            <div className={`col-6 godlike ${user.owner ? "owner" : ""}`}>{user.username}</div>
+            <div className={`wins col-3 godlike ${user.owner ? "owner" : ""}`}> {user.wins} </div>
             </>
           ) : (
             <>
-            <div className='col-3'> {leaderboard.indexOf(user) + 1}#</div>
-            <div className='col-6'>{user.username}</div>
-            <div className='col-3'> {user.wins} </div>
+            <div className={`rank col-3 ${user.owner ? "owner" : ""}`}> {leaderboard.indexOf(user) + 1}#</div>
+            <div className={`col-6 ${user.owner ? "owner" : ""}`}>{user.username}</div>
+            <div className={`wins col-3 ${user.owner ? "owner" : ""}`}> {user.wins} </div>
             </>
+            
           )}
 
           
