@@ -5,12 +5,12 @@
 }
 
 .godlike{
-    color: red;
+    color: gold;
     font-size: large;
 }
 
 .godlike:nth-child(2)::after{
-    content: "GODLIKE";
+    content: "[GODLIKE]";
     margin-left: 10px;
 }
 
