@@ -25,13 +25,11 @@ function Howtoplay() {
 	F to fire the canon
 	
 	</p>
-	 <div className="row">		
-<img id="logo1" src={pic} alt="Logo" className="column"></img>
-<div className="column">	
-<img id="logo1" src={pic2} alt="Logo"></img></div>
-<div className="column">	
-<img id="logo1" src={pic5} alt="Logo"></img></div></div>
-
+	 <div className="row d-flex justify-content-center mb-2">	
+	<img className="gameplay-image" src={pic} alt="Logo" />	
+	<img className="gameplay-image" src={pic2} alt="Logo" />
+	<img className="gameplay-image" src={pic5} alt="Logo" />
+	</div>
 	</div>
 	<br/>
 	</div>
