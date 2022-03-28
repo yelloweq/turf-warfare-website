@@ -8,16 +8,34 @@
       height: 100%;
       text-transform: uppercase;
       vertical-align: middle;
-      line-height: 80px;
       font-weight: 800;
       font-size: 14px;
+      line-height: 100%;
        }
 
 .nav-link:hover {
    box-shadow: rgb(64, 189, 249) 0px -4px 0px inset;
       }
 
-.nav{
+.active:hover {
+   box-shadow: rgb(64, 189, 249) 0px -4px 0px inset;
+      }
+
+.navbar{
    z-index: 999;
+   overflow:hidden;
+}
+
+.logo-image {
+   width: 100px;
+   height: min-content;
+
+}
+
+@media screen and (max-width: 991px) {
+   .expanded-buttons{
+      visibility: hidden;
+      content: none;
+   }
 }
 

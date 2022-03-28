@@ -91,6 +91,7 @@ img {
 	-moz-user-select: none;     /* Firefox all */
 	-ms-user-select: none;      /* IE 10+ */
 	user-select: none; 
-	z-index: 0;        
+	z-index: 0;      
+	pointer-events: none;  
 }
 		

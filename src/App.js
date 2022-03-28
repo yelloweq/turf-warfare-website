@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.scss';
-import Header from './components/header';
 import Nav from './components/nav';
 import Post from './components/post';
 import Blog from './pages/blogpage';
@@ -16,7 +15,7 @@ import Contact from './pages/contact';
 import PatchNotes from './pages/patchnotes';
 import Patch from './components/patch';
 import Howtoplay from './pages/howtoplay';
-
+import "./resources/css/bootstrap.min.css"
 
 function App() {
   return (
@@ -24,9 +23,9 @@ function App() {
     <AuthProvider>
     <Router>
       
-      <Header>
+      {/* <Header> */}
         <Nav />
-      </Header> 
+      {/* </Header>  */}
       <Switch>
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
