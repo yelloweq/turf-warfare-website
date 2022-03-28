@@ -45,7 +45,7 @@ function Leaderboard() {
 
   return (
   <>
-    <div className='container-xxl container-height border text-white mb-2'>
+    <div className='container-xxl container-height border text-white mb-2 ps-0 pe-0'>
       <div className='d-flex justify-content-center align-items-center text-center columns'>
       <div className='col-3 justify-content-center'>Rank</div>
       <div className='col-6 justify-content-center'>Username</div>
