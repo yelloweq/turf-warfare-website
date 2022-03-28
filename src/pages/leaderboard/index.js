@@ -89,6 +89,7 @@ function Leaderboard() {
             </nav>
     </div>
 	</div>
+  </div>
   </>
     )
 }

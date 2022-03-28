@@ -22,7 +22,7 @@ function Howtoplay() {
 	E to interact with the canon<br/>
 	Left and Right arrows for horizontal canon control<br/>
 	Up and Down arrows for vertical canon control<br/>
-	... to fire the canon
+	F to fire the canon
 	
 	</p>
 	 <div className="row">		
