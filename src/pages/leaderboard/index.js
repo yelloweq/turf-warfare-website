@@ -45,11 +45,12 @@ function Leaderboard() {
 
   return (
   <>
+    <div className='leaderboard'><br/>
     <div className='container-xxl container-height border text-white mb-2'>
       <div className='d-flex justify-content-center align-items-center text-center columns'>
-      <div className='col-3 justify-content-center'>Rank</div>
-      <div className='col-6 justify-content-center'>Username</div>
-      <div className='col-3 justify-content-center'>Wins</div>
+      <div className='col-3 justify-content-center'>RANK</div>
+      <div className='col-6 justify-content-center'>USERNAME</div>
+      <div className='col-3 justify-content-center'>WINS</div>
       </div>
       {leaderboard ? (leaderboard.map((user) => {
         return (
@@ -87,6 +88,7 @@ function Leaderboard() {
                 </ul>
             </nav>
     </div>
+	</div>
   </>
     )
 }
