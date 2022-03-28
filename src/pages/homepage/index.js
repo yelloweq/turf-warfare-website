@@ -25,7 +25,9 @@ export default function Home() {
                 Cannons, Guns, Grenades. Trench Warfare has it all!
                 <br />
                 <br />
-                Get out there and show yourself on the leaderboards today!
+                Get out there and show yourself on the leaderboards today!<br/><br/>
+			Available on Windows Only
+			
                 </h2>
 				<div className="play-wrapper">
 
