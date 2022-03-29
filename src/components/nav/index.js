@@ -30,7 +30,7 @@ function Nav() {
                         <Link to="/blog" className="nav-link">blog</Link>
                     </li>
                     <li class="nav-item">
-                        <Link to="/patch-notes" className="nav-link">blog</Link>
+                        <Link to="/patch-notes" className="nav-link">Patch Notes</Link>
                     </li>
                     <li class="nav-item">
                         <Link to="/how-to-play" className="nav-link">How to play</Link>
