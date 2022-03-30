@@ -50,7 +50,7 @@ function Nav() {
         {(currentUser) ?
             <div className='form-inline expanded-buttons'>
                 <button onClick={logout} className="btn btn-outline-primary ">Log out</button>
-                <Link to="https://drive.google.com/file/d/1OLXh1wnbZ1RXCKFJK8F8z6zd-czYukz_/view?usp=sharing" target="_blank" className="btn btn-primary" download>Download</Link>
+                <a href="https://drive.google.com/file/d/1OLXh1wnbZ1RXCKFJK8F8z6zd-czYukz_/view?usp=sharing" className="btn btn-primary">Download</a>
             </div> : <div className='form-inline justify-content-center m-0'> <Link to="/signup" className="btn btn-outline-primary">Sign up</Link> </div>
               } 
                </div>

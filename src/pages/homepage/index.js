@@ -33,7 +33,7 @@ export default function Home() {
 
 
                 {currentUser ? 
-                <Link to="https://drive.google.com/file/d/1OLXh1wnbZ1RXCKFJK8F8z6zd-czYukz_/view?usp=sharing" target="_blank" className="play-button" download>Download</Link>
+                <a href="https://drive.google.com/file/d/1OLXh1wnbZ1RXCKFJK8F8z6zd-czYukz_/view?usp=sharing" className="play-button">Download</a>
                 : <Link className="play-button" to="/signup">Play Now</Link>
                 }
 
