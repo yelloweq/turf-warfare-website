@@ -50,7 +50,7 @@ function Nav() {
         {(currentUser) ?
             <div className='form-inline expanded-buttons'>
                 <button onClick={logout} className="btn btn-outline-primary ">Log out</button>
-                <Link to="/Trench Warfare Installer.exe" target="_blank" className="btn btn-primary" download>Download</Link>
+                <Link to="/Trench Warfare Installer.zip" target="_blank" className="btn btn-primary" download>Download</Link>
             </div> : <div className='form-inline justify-content-center m-0'> <Link to="/signup" className="btn btn-outline-primary">Sign up</Link> </div>
               } 
                </div>
