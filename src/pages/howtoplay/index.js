@@ -6,7 +6,7 @@ import pic5 from'../../resources/img/Capture5.png'
 
 function Howtoplay() {
   return (
-    <div className= "howtoplay">
+    <div className= "howtoplay"><br/>
 	<div className= "container">
 
 	<h1> How To Play </h1>
