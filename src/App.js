@@ -23,9 +23,8 @@ function App() {
     <AuthProvider>
     <Router>
       
-      {/* <Header> */}
         <Nav />
-      {/* </Header>  */}
+        
       <Switch>
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />

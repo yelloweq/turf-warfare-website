@@ -55,7 +55,7 @@ function Leaderboard() {
       {leaderboard ? (leaderboard.map((user) => {
         return (
           <div key={user.username} className='d-flex justify-content-center align-items-center'> 
-          {(user.wins > 11) ? (
+          {(leaderboard[0] === user) ? (
             <>
             <div className={`rank col-3 godlike ${user.owner ? "owner" : ""}`}> {leaderboard.indexOf(user) + 1}#</div>
             <div className={`col-6 godlike ${user.owner ? "owner" : ""}`}>{user.username}</div>

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { FaFacebook, FaGoogle, FaApple, FaArrowRight } from 'react-icons/fa'
+import { FaArrowRight } from 'react-icons/fa'
 import './auth.scss'
 import { useAuth } from '../../contexts/AuthContext'
 import { Link, useHistory } from 'react-router-dom'
@@ -29,9 +29,9 @@ function Login() {
     return (
         <div className="signup-outer-wrapper">
         <div className="signup-container">
-            <h1>Sign in</h1>
+            <h1 className='signup-title'>Sign in</h1>
            
-            {error && <h2>{error}</h2>}
+            {error && <h2 className='signup-error'>{error}</h2>}
             <form className="form" id="register_form" onSubmit={handleSubmit}>
                 <div className="input-container">
                     <input type="text" name="email" ref={ emailRef } required />
@@ -40,18 +40,6 @@ function Login() {
                 <div className="input-container input-value">
                     <input type="password" name="password" ref={ passwordRef } required />
                     <label htmlFor="password">Password</label>
-                </div>
-
-                <div className="social">
-                    <div className="social facebook">
-                        <FaFacebook size={26} color="#fff"/>
-                    </div>
-                    <div className="social google">
-                        <FaGoogle size={26}/>
-                    </div>
-                    <div className="social apple">
-                        <FaApple size={26}/>
-                    </div>
                 </div>
 
                 <div className="checkbox-container">

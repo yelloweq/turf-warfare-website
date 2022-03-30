@@ -1,15 +1,20 @@
 import React, { useRef, useState } from 'react'
-import { FaFacebook, FaGoogle, FaApple, FaArrowRight } from 'react-icons/fa'
+import { FaArrowRight } from 'react-icons/fa'
 import './auth.scss'
 import { useAuth } from '../../contexts/AuthContext'
 import { Link, useHistory } from 'react-router-dom'
+import { auth } from '../../config/firebase';
 
 function Signup() {
     const emailRef = useRef()
     const passwordRef = useRef()
-    // const usernameRef = useRef()
+    const usernameRef = useRef()
     const confirmPasswordRef = useRef()
-    const { signup, signupWithGoogle, signupWithTwitter, signupWithFacebook } = useAuth()
+    const { 
+        signup,
+        getUsers,
+        writeUserData,
+    } = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const history = useHistory()
@@ -26,62 +31,59 @@ function Signup() {
         try {
             setError('')
             setLoading(true)
-            await signup(emailRef.current.value, passwordRef.current.value)
-            history.push("/")
+            const email = emailRef.current.value;
+            const password = passwordRef.current.value;
+            const username = usernameRef.current.value;
+            const users = await getUsers();
+            const unavailableUsernames = [];
+            if (!users){
+                await signup(email, password);
+                auth.onAuthStateChanged(user => {
+                    if(user != null){
+                        writeUserData(user.uid, username, email)
+                        history.push("/")
+                    }
+                })
+            }
+
+            users.forEach(function (snap) {
+                unavailableUsernames.push(snap.val().username);
+            })
+
+
+            if (!unavailableUsernames.includes(username)){
+                
+                await signup(email, password);
+                auth.onAuthStateChanged(user => {
+                    if(user != null){
+                        writeUserData(user.uid, username, email)
+                        history.push("/")
+                    }
+                })
+                
+            } 
+            setError("Username unavailable.");
+
+            //await writeUserData(user.uid, username, email);
+            
         } catch  {
-            setError("Failed to create an account")
+            setError("Failed to create an account.")
         }
         setLoading(false)
     }
-
-    async function handleGoogleSignup() {
-        
-        try {
-            setError('')
-            setLoading(true)
-            await signupWithGoogle()
-            history.push("/")
-        } catch {
-            setError("Google signup failed.")
-        }
-    }
-
-        async function handleTwitterSignup() {
-        
-            try {
-                setError('')
-                setLoading(true)
-                await signupWithTwitter()
-                history.push("/")
-            } catch {
-                setError("Twitter signup failed.")
-            }
-        }
-            
-            async function handleFacebookSignup() {
-        
-                try {
-                    setError('')
-                    setLoading(true)
-                    await signupWithFacebook()
-                    history.push("/")
-                } catch {
-                    setError("Facebook signup failed.")
-                }
-            }
     
     
     return (
         <div className="signup-outer-wrapper">
         <div className="signup-container">
-            <h1>Sign up</h1>
+            <h1 className='signup-title'>Sign up</h1>
            
-            {error && <h2>{error}</h2>}
+            {error && <h2 className='signup-error'>{error}</h2>}
             <form className="form" id="register_form" onSubmit={handleSubmit}>
-                {/* <div className="input-container">
+                <div className="input-container">
                     <input type="text" name="username" ref={ usernameRef } required />
                     <label htmlFor="username">Username</label>
-                </div> */}
+                </div> 
                 <div className="input-container">
                     <input type="text" name="email" ref={ emailRef } required />
                     <label htmlFor="email">Email</label>
@@ -96,25 +98,6 @@ function Signup() {
                     <label htmlFor="confirmPassword">Confirm Password</label>
                 </div>
 
-                <div className="social">
-                    <div className="facebook">
-                        <button className='service-login-button' onClick={handleFacebookSignup}>
-                        <FaFacebook size={26} color="#fff"/>
-                        </button>
-                        
-                    </div>
-                    <div className="google">
-                        <button className='service-login-button' onClick={handleGoogleSignup}>
-                        <FaGoogle size={26}/>
-                        </button>
-                    </div>
-                    <div className="apple">
-                        <button className='service-login-button' onClick={handleTwitterSignup}>
-                        <FaApple size={26}/>
-                        </button>
-                    </div>
-                </div>
-
                 <div className="checkbox-container">
                     <input type="checkbox" className="checkbox" id="check" value="stay" />
                     <label htmlFor="check">Stay signed in </label>
@@ -122,7 +105,7 @@ function Signup() {
                 </div>
 
                 <div className="button-container">
-                    <button type="submit" className="submitButton" disabled={loading}><FaArrowRight size={30} /></button>
+                    <button type="submit" className="submitButton" disabled={loading}><FaArrowRight size={60} color="white" /></button>
                 </div>
                     
                     {/* add link to register page and email verification */}

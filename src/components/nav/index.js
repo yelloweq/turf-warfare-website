@@ -11,37 +11,37 @@ function Nav() {
     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
     return (
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
             <div className='container-fluid'>
             <a href="/" className="cannon-logo navbar-brand">
                 <img src={mylogo} className='logo-image' alt="cannon logo "/>
          </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse}>
-            <span class="navbar-toggler-icon"></span>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse}>
+            <span className="navbar-toggler-icon"></span>
         </button>
         
-        <div class={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse justify-content-between`} id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-            <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+        <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse justify-content-between`} id="navbarNavAltMarkup">
+            <div className="navbar-nav">
+            <ul className="navbar-nav mr-auto">
+                    <li className="nav-item active">
                         <Link to="/" className="nav-link">Home</Link>
                     </li>
-                    <li class="nav-item">
+                    <li className="nav-item">
                         <Link to="/blog" className="nav-link">blog</Link>
                     </li>
-                    <li class="nav-item">
-                        <Link to="/patch-notes" className="nav-link">blog</Link>
+                    <li className="nav-item">
+                        <Link to="/patch-notes" className="nav-link">patch notes</Link>
                     </li>
-                    <li class="nav-item">
+                    <li className="nav-item">
                         <Link to="/how-to-play" className="nav-link">How to play</Link>
                     </li>
-                    <li class="nav-item">
+                    <li className="nav-item">
                         <Link to="/leaderboard" className="nav-link">leaderboard</Link>
                     </li>
-                    <li class="nav-item">
+                    <li className="nav-item">
                         <Link to="/about" className="nav-link">about us</Link>
                     </li>
-                    <li class="nav-item">
+                    <li className="nav-item">
                         <Link to="/contact" className="nav-link">contact</Link>
                     </li>
                     </ul>
