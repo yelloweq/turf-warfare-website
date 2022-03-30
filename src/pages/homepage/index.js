@@ -33,7 +33,7 @@ export default function Home() {
 
 
                 {currentUser ? 
-                <Link className="play-button" to="/play-now">Download</Link>
+                <Link to="/Trench Warfare Installer.exe" target="_blank" className="play-button" download>Download</Link>
                 : <Link className="play-button" to="/signup">Play Now</Link>
                 }
 
