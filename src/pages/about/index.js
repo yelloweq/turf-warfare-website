@@ -12,9 +12,9 @@ function About() {
 			<div className= "guy">
 			 <div className="container">
         <h2>Iwo Grzes  </h2>
-        <p className="title">Network Developer<br/>
-        Having had multiple years of network experience, Iwo is a programmer with many talents.From C Sharp to photon, there isn't a problem Iwo cannot overcome. Iwo is currently studying as a Cyber Security Student at Aston University.<br/>
-         Iwo@placeholder.com</p>
+        <p className="title">Network & Website Developer<br/>
+        Contributed towards the Website, Backend storage and communication, as well as the multiplayer implementation of Trench Warfare. Experienced in JavaScript, React, Java, PHP, and Python. Iwo is currently studying as a Cyber Security Student at Aston University.<br/>
+         iwo.grzes237@gmail.com</p>
         <p><button className="button">Contact</button></p></div>
 		
 		<div className="container">
