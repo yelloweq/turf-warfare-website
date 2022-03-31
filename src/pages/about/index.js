@@ -70,7 +70,7 @@ function About() {
         <h2>Adnan Ghelle </h2>
         <p className="title">Web Developer<br/>
         Adnan is a web developer that has designed several websites in the past. Adnan is experienced in languages such as C Sharp,Java and Python. Adnan is currently studying Computer Science at Aston University.<br/>
-         Adnan@example.com</p>
+         Adnanghelle@outlook.com</p>
         <p><button className="button">Contact</button></p></div>
 		
 
