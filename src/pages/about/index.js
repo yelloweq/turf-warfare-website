@@ -62,14 +62,14 @@ function About() {
 		<div className="container">
         <h2>Ali Abdalrahman </h2>
         <p className="title">Game Developer<br/>
-        Some text that describes me lorem ipsum ipsum lorem.<br/>
+        Ali is a bright game developer that has designed various games in the past. Ali is experienced in languages such as C Sharp,Java and Python. Ali currently studies Computer Science at Aston University.<br/>
          bob@example.com</p>
         <p><button className="button">Contact</button></p></div>
 		
 		<div className="container">
         <h2>Adnan Ghelle </h2>
         <p className="title">Game Developer<br/>
-        Some text that describes me lorem ipsum ipsum lorem.<br/>
+        Ali is a bright game developer that has designed various games in the past. Ali is experienced in languages such as C Sharp,Java and Python. Adnan currently studies Computer Science at Aston University.<br/>
          bob@example.com</p>
         <p><button className="button">Contact</button></p></div>
 		
