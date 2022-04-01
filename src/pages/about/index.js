@@ -18,7 +18,7 @@ function About() {
         <p><button className="button">Contact</button></p></div>
 		
 		<div className="container">
-        <h2>Qasim Qasmi </h2>
+        <h2>Qasim Ali Qasmi </h2>
         <p className="title">Web Developer<br/>
         Qasim is a web developer that has worked on multiple websites through out the years.Having experience in Web based languages such as HTML and PHP. Qasim currently studies Computer Science at Aston University.<br/>
          qasim@placeholder.com</p>
