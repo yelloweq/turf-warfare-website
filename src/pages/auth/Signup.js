@@ -18,25 +18,29 @@ function Signup() {
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const history = useHistory()
-
-
+    const PasswordRequirements = /(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*,.+=\-|;])[A-Za-z0-9!@#$%^&*,.+=\-|;]{6,}/
     async function handleSubmit(e) {
         e.preventDefault()
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
+        const username = usernameRef.current.value;
+        setError('')
+        setLoading(true)
+        
 
         if (passwordRef.current.value !== confirmPasswordRef.current.value) {
             return setError("Passwords do not match")
         }
-        
 
         try {
-            setError('')
-            setLoading(true)
-            const email = emailRef.current.value;
-            const password = passwordRef.current.value;
-            const username = usernameRef.current.value;
+            
             const users = await getUsers();
             const unavailableUsernames = [];
+
             if (!users){
+                if (!PasswordRequirements.test(password)){
+                    return setError('Password needs to be at least 6 characters long, have 1 Capital, 1 lowercase and 1 symbol.')
+                }
                 await signup(email, password);
                 auth.onAuthStateChanged(user => {
                     if(user != null){
@@ -52,7 +56,9 @@ function Signup() {
 
 
             if (!unavailableUsernames.includes(username)){
-                
+                if (!PasswordRequirements.test(password)){
+                    return setError('Password needs to be at least 6 characters long, have 1 Capital, 1 lowercase and 1 symbol.')
+                }
                 await signup(email, password);
                 auth.onAuthStateChanged(user => {
                     if(user != null){
@@ -64,9 +70,8 @@ function Signup() {
             } 
             setError("Username unavailable.");
 
-            //await writeUserData(user.uid, username, email);
             
-        } catch  {
+        } catch {
             setError("Failed to create an account.")
         }
         setLoading(false)
