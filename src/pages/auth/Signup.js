@@ -36,7 +36,6 @@ function Signup() {
             
             const users = await getUsers();
             const unavailableUsernames = [];
-            console.log(PasswordRequirements.test(password))
             if (!users){
                 if (PasswordRequirements.test(password)){
                     await signup(email, password);
