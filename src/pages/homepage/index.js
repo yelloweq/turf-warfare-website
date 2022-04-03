@@ -1,6 +1,4 @@
 import React from 'react'
-import { useAuth } from '../../contexts/AuthContext'
-import { Link } from 'react-router-dom'
 import './Home.scss'
 import logo1 from'../../resources/img/logo.png'
 
@@ -8,12 +6,9 @@ import logo1 from'../../resources/img/logo.png'
 
 
 export default function Home() {
-    const { currentUser } = useAuth()
-
-
     return (
        <div className="landing">
-	   <img id="logo1" src={logo1} alt="Logo" className="center"></img>
+	   <img id="landing-logo" src={logo1} alt="Logo" className="center"></img>
         <div className ="text">
                 <h1 className='display-4 fw-bold 1h-1 mb-3'>Trench Warfare</h1>    
                 <h2>
@@ -30,13 +25,7 @@ export default function Home() {
 			
                 </h2>
 				<div className="play-wrapper">
-
-
-                {currentUser ? 
                 <a href="https://drive.google.com/file/d/1OLXh1wnbZ1RXCKFJK8F8z6zd-czYukz_/view?usp=sharing" className="play-button">Download</a>
-                : <Link className="play-button" to="/signup">Play Now</Link>
-                }
-
                 </div>
                 </div>
 

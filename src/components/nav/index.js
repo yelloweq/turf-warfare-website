@@ -53,8 +53,9 @@ function Nav() {
             <a href="https://drive.google.com/file/d/1OLXh1wnbZ1RXCKFJK8F8z6zd-czYukz_/view?usp=sharing" className="btn btn-primary ms-4">Download</a>
             </div> :   
                 <div className='form-inline expanded-buttons'>
-                <Link to="/signup" className="btn btn-outline-primary">Sign up</Link>
-                <Link to="/login" className="btn btn-primary ms-4">Log in</Link> </div>
+                <Link to="/login" className="btn btn-primary ms-4">Log in</Link>
+                <a href="https://drive.google.com/file/d/1OLXh1wnbZ1RXCKFJK8F8z6zd-czYukz_/view?usp=sharing" className="btn btn-primary ms-4">Download</a>
+                </div>
               } 
                </div>
             </div>
