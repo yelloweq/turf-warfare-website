@@ -18,7 +18,7 @@ function Signup() {
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const history = useHistory()
-    const PasswordRequirements = /(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*,.+=\-|;])[A-Za-z0-9!@#$%^&*,.+=\-|;]{6,}/
+    const PasswordRequirements = /(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*,.+=\-|;])[A-Za-z0-9!@#%&,.]{6,}/
     async function handleSubmit(e) {
         e.preventDefault()
         const email = emailRef.current.value;
@@ -36,18 +36,20 @@ function Signup() {
             
             const users = await getUsers();
             const unavailableUsernames = [];
-
+            console.log(PasswordRequirements.test(password))
             if (!users){
-                if (!PasswordRequirements.test(password)){
+                if (PasswordRequirements.test(password)){
+                    await signup(email, password);
+                    auth.onAuthStateChanged(user => {
+                        if(user != null){
+                            writeUserData(user.uid, username, email)
+                            history.push("/")
+                        }
+                    })
+                }
+                else {
                     return setError('Password needs to be at least 6 characters long, have 1 Capital, 1 lowercase and 1 symbol.')
                 }
-                await signup(email, password);
-                auth.onAuthStateChanged(user => {
-                    if(user != null){
-                        writeUserData(user.uid, username, email)
-                        history.push("/")
-                    }
-                })
             }
 
             users.forEach(function (snap) {
@@ -56,16 +58,19 @@ function Signup() {
 
 
             if (!unavailableUsernames.includes(username)){
-                if (!PasswordRequirements.test(password)){
+                if (PasswordRequirements.test(password)){
+                    await signup(email, password);
+                    auth.onAuthStateChanged(user => {
+                        if(user != null){
+                            writeUserData(user.uid, username, email)
+                            history.push("/")
+                        }
+                    })
+                }
+                else {
                     return setError('Password needs to be at least 6 characters long, have 1 Capital, 1 lowercase and 1 symbol.')
                 }
-                await signup(email, password);
-                auth.onAuthStateChanged(user => {
-                    if(user != null){
-                        writeUserData(user.uid, username, email)
-                        history.push("/")
-                    }
-                })
+                
                 
             } 
             setError("Username unavailable.");

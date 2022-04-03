@@ -29,7 +29,7 @@ function Nav() {
                     <li className="nav-item">
                         <Link to="/blog" className="nav-link">blog</Link>
                     </li>
-                    <li class="nav-item">
+                    <li className="nav-item">
                         <Link to="/patch-notes" className="nav-link">Patch Notes</Link>
                     </li>
                     <li className="nav-item">
@@ -49,9 +49,12 @@ function Nav() {
         
         {(currentUser) ?
             <div className='form-inline expanded-buttons'>
-                <button onClick={logout} className="btn btn-outline-primary ">Log out</button>
-                <a href="https://drive.google.com/file/d/1OLXh1wnbZ1RXCKFJK8F8z6zd-czYukz_/view?usp=sharing" className="btn btn-primary">Download</a>
-            </div> : <div className='form-inline justify-content-center m-0'> <Link to="/signup" className="btn btn-outline-primary">Sign up</Link> </div>
+            <button onClick={logout} className="btn btn-outline-primary ">Log out</button>
+            <a href="https://drive.google.com/file/d/1OLXh1wnbZ1RXCKFJK8F8z6zd-czYukz_/view?usp=sharing" className="btn btn-primary ms-4">Download</a>
+            </div> :   
+                <div className='form-inline expanded-buttons'>
+                <Link to="/signup" className="btn btn-outline-primary">Sign up</Link>
+                <Link to="/login" className="btn btn-primary ms-4">Log in</Link> </div>
               } 
                </div>
             </div>
