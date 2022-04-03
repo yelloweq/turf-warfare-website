@@ -18,7 +18,7 @@ function About() {
         <p><button className="button">Contact</button></p></div>
 		
 		<div className="container">
-        <h2>Qasim Qasmi </h2>
+        <h2>Qasim Ali Qasmi </h2>
         <p className="title">Web Developer<br/>
         Qasim is a web developer that has worked on multiple websites through out the years.Having experience in Web based languages such as HTML and PHP. Qasim currently studies Computer Science at Aston University.<br/>
          qasim@placeholder.com</p>
@@ -48,29 +48,29 @@ function About() {
 		<div className="container">
         <h2>Ayub Wahab </h2>
         <p className="title">Game Developer<br/>
-        Ayub is a talented game developer that has designed multiple games in the past. Ayub is experienced in languages such as C Sharp and Java. Ayub currently studies Computer Science at Aston University <br/>
+        Ayub is a talented game developer that has designed multiple games in the past. Ayub is experienced in languages such as C Sharp and Java. Ayub currently studies Computer Science at Aston University.<br/>
          Ayub@example.com</p>
         <p><button className="button">Contact</button></p></div>
 		
 		<div className="container">
         <h2>Hunain Chaudhry </h2>
         <p className="title">Game Developer<br/>
-        Hunain is a talented game developer that has designed multiple games in the past. Hunain is experienced in languages such as C Sharp and Java. Hunain currently studies Computer Science at Aston University<br/>
+        Hunain is a talented game developer that has designed multiple games in the past. Hunain is experienced in languages such as C Sharp and Java. Hunain currently studies Computer Science at Aston University.<br/>
          Hunain@example.com</p>
         <p><button className="button">Contact</button></p></div>
 		
 		<div className="container">
         <h2>Ali Abdalrahman </h2>
         <p className="title">Game Developer<br/>
-        Ali is a bright game developer that has designed various games in the past. Ali is experienced in languages such as C Sharp,Java and Python. Ali currently studies Computer Science at Aston University.<br/>
-         bob@example.com</p>
+        Ali is a bright game developer that has designed various games in the past. Ali is experienced in languages such as C Sharp,Java and Python. Ali is currently studying Computer Science at Aston University.<br/>
+         Ali@example.com</p>
         <p><button className="button">Contact</button></p></div>
 		
 		<div className="container">
         <h2>Adnan Ghelle </h2>
-        <p className="title">Game Developer<br/>
-        Ali is a bright game developer that has designed various games in the past. Ali is experienced in languages such as C Sharp,Java and Python. Adnan currently studies Computer Science at Aston University.<br/>
-         bob@example.com</p>
+        <p className="title">Web Developer<br/>
+        Adnan is a web developer that has designed several websites in the past. Adnan is experienced in languages such as C Sharp,Java and Python. Adnan is currently studying Computer Science at Aston University.<br/>
+         Adnanghelle@outlook.com</p>
         <p><button className="button">Contact</button></p></div>
 		
 
